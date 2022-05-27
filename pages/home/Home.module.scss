@@ -1,0 +1,68 @@
+
+//baseStyle
+.btnConatiner{
+    padding: .9rem 1rem;
+    border-radius: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+};
+.btnConatiner:focus{
+    outlined-width: 0px 
+}
+.container{
+    display: flex;
+    flex-direction: row;
+};
+.titleStyle{
+    margin-right: .5rem;
+    font-size: 1rem
+};
+//sizeStyle
+.smallSize{
+    width: 10rem;
+};
+.mediumSize{
+    width: 14rem;
+};
+.largeSize{
+    width: 20rem;
+};
+//modeStyle
+.containedModeStyle{
+    // background-color: rgb(5, 11, 87);
+    color: #fff;
+    font-size: 1rem;
+};
+.styleCustom{
+    background: brown;
+}
+.containedOutlinedModeStyle{
+    border: solid 2px rgb(5, 11, 87); 
+    color:  rgb(5, 11, 87);
+     font-size: 1rem;
+}
+.dangerModeStyle{
+    background-color: rgb(221, 0, 0);
+    color: #fff;
+};
+.dangerOutlinedModeStyle{
+    border: solid 2px  rgb(221, 0, 0); 
+    color:rgb(221, 0, 0);
+}
+.outlinedModeStyle{
+   border: solid 2px rgb(5, 11, 87); 
+   color:  rgb(5, 11, 87);
+};
+.disabledModeStyle{
+    background-color: rgb(160, 160, 160);
+    color: rgb(48, 48, 48);
+};
+.disabledOutlinedModeStyle{
+    border: solid 2px rgb(160, 160, 160); 
+    color:  rgb(160, 160, 160);
+}
+
+
+

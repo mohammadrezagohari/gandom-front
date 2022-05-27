@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "esnext",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "paths": {
+            "@assets/*": ["assets/*"],
+            "@components/*": ["components/*"],
+            "@lib/*": ["lib/*"],
+            "@store/*": ["store/*"],
+            "@gate/*": ["gate/*"],
+            "@interfaces/*": ["interfaces/*"],
+            "@pages/*": ["pages/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "assets/styles/themes"],
+    "exclude": ["node_modules"]
+}
