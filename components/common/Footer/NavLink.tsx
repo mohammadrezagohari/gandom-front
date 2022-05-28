@@ -5,11 +5,11 @@ import { FunctionComponent } from 'react';
 export interface NavLinkProps {
     title: string;
     href: string;
-    Icon: FunctionComponent<React.SVGAttributes<SVGElement>>;
+    // Icon: FunctionComponent<React.SVGAttributes<SVGElement>>;
     isActive: boolean;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ Icon, title, isActive, href }) => {
+const NavLink: React.FC<NavLinkProps> = ({/*  Icon,  */title, isActive, href }) => {
     return (
         <Link href={href}>
             <div
@@ -18,7 +18,7 @@ const NavLink: React.FC<NavLinkProps> = ({ Icon, title, isActive, href }) => {
                     isActive ? 'text-green-550' : 'text-gray-500',
                 )}
             >
-                <Icon fill={isActive ? '#23c0b5' : 'gray'} className="w-6 h-6" />
+                {/* <Icon fill={isActive ? '#23c0b5' : 'gray'} className="w-6 h-6" /> */}
 
                 <div
                     className={cn(

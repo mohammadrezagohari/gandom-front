@@ -6,7 +6,7 @@ const Wallet = () => {
         <Layout searchBar footer selected="wallet">
             <div>this is Wallet page</div>;
             <ButtonCustom
-            title="تایید"
+                title="تایید"
             />
         </Layout>
     );

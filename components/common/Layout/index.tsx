@@ -5,7 +5,6 @@ import ShoppingIcon from '@assets/svg/shoppingIcon.svg';
 import SearchBar from '../SearchBar';
 import Footer from '../Footer';
 import { ContextProps, MyDirection } from "@pages/_app";
-// import { i18n, withNamespaces } from '../../../i18n';
 export interface LayoutProps {
     children: ReactNode;
     banner?: boolean;
@@ -24,13 +23,11 @@ const Layout: React.FC<LayoutProps> = ({
     selected,
 }) => {
     const { lang, langChange } = React.useContext<ContextProps>(MyDirection);
-    // const lng = t;
-
-    // To manually change language
-
     return (
         <>
-            <div dir={lang} >
+            <div
+                dir={lang}
+            >
                 <Head>
                     <title>{title}</title>
                 </Head>
@@ -52,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({
                     {banner && (
                         <div className="w-full justify-center flex items-center px-3 py-3 text-white ">
                             <div className="flex justify-center items-center ">
-                                <ShoppingIcon className="w-6 -mt-1 h-6 mx-4 fill-red" />
+                                {/* <ShoppingIcon className="w-6 -mt-1 h-6 mx-4 fill-red" /> */}
                                 <div className="font-bold text-base mr-2">{lang === "rtl" ? "فروشگاه آنلاین" : "online shop"}</div>
                             </div>
                         </div>

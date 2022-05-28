@@ -11,7 +11,6 @@ const Search: FC = () => {
                 search page
                 <div>{router.query.q}</div>
             </div>
-            ;
         </Layout>
     );
 };
