@@ -22,10 +22,9 @@ const Home: FC<HomeProps> = (props) => {
                 <h1 className="text-6xl font-bold">
                     Welcome to{" "}
                     <a className="text-blue-600" href="https://nextjs.org">
-                        Next.js!
+                        Next.js!!
                     </a>
                     <h1 className='text-lg text-blue-600 bg-gold'>{props.locale}{t("test")}</h1>
-
                 </h1>
                 <p className="mt-3 text-2xl">
                     Get started by editing{" "}
@@ -33,7 +32,6 @@ const Home: FC<HomeProps> = (props) => {
                         pages/index.js
                     </code>
                 </p>
-
                 <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
                     <a
                         href="https://nextjs.org/docs"

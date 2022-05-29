@@ -6,13 +6,16 @@ interface HomeProps {
     locale?: any
 }
 const Home: FC<HomeProps> = (props) => {
-    const { t } = useTranslation(['translation']);
+    const { t, i18n } = useTranslation(['translation']);
     return (
         <Layout title="Gandom" footer banner searchBar selected="home">
             <div>
                 <p>\\\\\\\\\\\\jhhhh\\\\\\\\\\\\</p>
             </div>
-            <h1 className='text-lg text-blue-600 bg-gold'>{props.locale}{t("test")}</h1>
+            
+            <h1
+            
+                className='text-lg text-blue-600 bg-gold'>{props.locale}{t("test")}</h1>
         </Layout>
 
     );
