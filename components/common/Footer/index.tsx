@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 import NavLink from './NavLink';
 
 interface FooterProps {
-    selected: 'home' | 'wallet' | 'cart' | 'profile' | undefined;
+    selected: 'home' | 'Order' | 'ourWorks' | 'ourTeam' | 'aboutus' |undefined;
 }
 
 const Footer: FC<FooterProps> = ({ selected }) => {
@@ -21,13 +21,13 @@ const Footer: FC<FooterProps> = ({ selected }) => {
             <NavLink
                 // Icon={WalletIcon}
                 href="/profile"
-                isActive={selected === 'wallet'}
+                isActive={selected === 'Order'}
                 title="کیف پول"
             />
             <NavLink
                 // Icon={CartIcon}
                 href="/profile/cart"
-                isActive={selected === 'cart'}
+                isActive={selected === 'ourWorks'}
                 title="سفارشات من"
             />
             <NavLink

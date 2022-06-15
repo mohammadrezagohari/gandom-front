@@ -5,3 +5,16 @@
 @import './components.css';
 
 @tailwind utilities;
+
+@layer components {
+    #__next {
+        
+    }
+    html,
+    body {
+
+    }
+}
+.hidescroll{
+    overflow: hidden;
+}

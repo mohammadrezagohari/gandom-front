@@ -18,10 +18,8 @@ const SearchBar: React.FC = () => {
                     defaultValue={router.query.q}
                     onKeyUp={(e) => {
                         e.preventDefault();
-
                         if (e.key === 'Enter') {
                             const q = e.currentTarget.value;
-
                             router.push(
                                 {
                                     pathname: `/search`,

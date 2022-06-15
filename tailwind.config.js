@@ -6,31 +6,40 @@ module.exports = {
         applyComplexClasses: true,
     },
     purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
-    darkMode: 'class', // 'media' or 'class'
+    darkMode: 'class', // 'media' or 'class',
     theme: {
-        // screens: {
-        //     'sm': {'min': '640px', 'max': '767px'},
-        //     // => @media (min-width: 640px and max-width: 767px) { ... }
-
-        //     'md': {'min': '768px', 'max': '1023px'},
-        //     // => @media (min-width: 768px and max-width: 1023px) { ... }
-
-        //     'lg': {'min': '1024px', 'max': '1279px'},
-        //     // => @media (min-width: 1024px and max-width: 1279px) { ... }
-
-        //     'xl': {'min': '1280px', 'max': '1535px'},
-        //     // => @media (min-width: 1280px and max-width: 1535px) { ... }
-
-        //     '2xl': {'min': '1536px'},
-        //     // => @media (min-width: 1536px) { ... }
-        // },
         extend: {
             fill: theme => ({
                 'red': theme('colors.red'),
                 'green': theme('colors.green.500'),
             }),
-            zIndex: {},
+            borderWidth: {
+                '0': '0',
+                '5': '0.5px',
+                '1': '1px',
+                '2': '2px',
+                '3': '3px',
+                '4': '4px',
+                '6': '6px',
+                '8': '8px',
+            },
             keyframes: {
+                 modal: {
+                    '0%, 100%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                    },
+
+                    // if you are using drawer variant right
+                    'drawer-right': {
+                    '0%, 100%': { right: '-500px' },
+                    '100%': { right: '0' },
+                    },
+
+                    // if you are using drawer variant left
+                    'drawer-left': {
+                    '0%, 100%': { left: '-500px' },
+                    '100%': { left: '0' },
+                    },
                 opacity: {
                     from: {
                         opacity: 0,
@@ -73,6 +82,23 @@ module.exports = {
                 opacity: 'opacity 0.2s ease-in-out',
                 fadeLeft: 'fadeLeft 1s ease-in-out',
                 fadeRight: 'fadeRight 1s ease-in-out',
+                borderEffect: "transform 250ms ease-in-out",
+               
+                // if you are using the animate variant of the modal
+                modal: 'modal 0.5s',
+
+                // if you are using drawer variant right
+                drawerRight: 'drawer-right 0.3s',
+
+                // if you are using drawer variant left
+                drawerLeft: 'drawer-left 0.3s',
+            },
+            transitionProperty: {
+                'backgroundsize': 'background-size',
+            },
+             transitionDuration: {
+                '3': '0.3ms',
+                '2000': '2000ms',
             },
             width: {
                 'max-content': 'max-content',
@@ -84,18 +110,24 @@ module.exports = {
                 '128': '10rem',
             },
              fontFamily: {
-                'poppines': ['popines'],
+                 'poppines': ['poppines'],
+                 'serif': ['serif']
             },
             fontWeight: {
                 'light': 300,
                 "medium": 500,
                 "bold": 600,
                 "regular":400
-                },
+            },
+            flex: {
+                '1.5': '1.5 1.5 0%'
+             },
             colors: {
                 transparent: 'transparent',
                 current: 'currentColor',
+                blur:"#ffffff33",
                 white: '#ffffff',
+                black:'##0a0a0a',
                 light: "#F7F7F7",
                 dark: "#101010",
                 gray:{
@@ -129,14 +161,6 @@ module.exports = {
             },
            
         },
-    },
-
-    // variants: {
-    //    
-    //     extend: {
-            
-    // },
-    // plugins: [
-    //    
-    // ],
+    }
+     
 };

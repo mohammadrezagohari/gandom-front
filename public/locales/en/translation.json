@@ -1,3 +1,14 @@
 {
-    "test": "hello"
+    "test": "hello",
+    "langFa":"Persian",
+    "langEn": "English",
+    "home": "Home",
+    "order":"Order",
+    "ourWorks": "Our Works",
+    "ourTeam": "Our Team",
+    "aboutus": "About us",
+    "dark": "Dark",
+    "light": "Light",
+    "theme": "Theme",
+    "lang" : "Language"
 }

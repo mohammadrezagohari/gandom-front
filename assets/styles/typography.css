@@ -22,5 +22,12 @@
   font-family: "Poppins";
   src: url('../fonts/poppins/Poppins-SemiBold.ttf');
   font-weight: "bold";
-  font-style: italic;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  src: url('../fonts/NotoSerif/NotoSerif-Bold.ttf');
+  font-weight: "Notobold";
+  font-style: normal;
 }
