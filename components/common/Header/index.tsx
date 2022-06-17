@@ -65,8 +65,8 @@ const Header: FC<HeaderProps> = () => {
 
     return (
         <>
-            <DrawerContent visible={show} setVisible={setShow} />
             <nav className="backdrop-blur-[3px] z-[200] dark:backdrop-blur-md bg-white/30 pt-4 w-full border-gray-light fixed top-0 xl:px-20 md:px-5 px-2 py-2.5 dark:bg-dark/50 justify-around items-center flex border-zinc-300 border-b">
+                <DrawerContent visible={show} setVisible={setShow} />
                 <div className="relative w-full mx-10 md:mx-7 hidden md:flex flex-wrap justify-between items-center ">
                     <div dir="ltr" className='flex flex-row rtl:justify-end order-1 w-2/12'>{theme === "dark" ? (<LogoLight className='w-36 h-16' />) : <LogoDark className='w-36 h-16' />}</div>
                     <div className="hidden md:flex order-2 xl:w-5/12 lg:w-6/12" id="mobile-menu-4">

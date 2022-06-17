@@ -96,10 +96,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
             ref={drawer}
             className={cn("flex-row w-full top-0 bg-transparent z-[400] absolute", visible ? "flex" : "hidden")}>
             <div
-                onClick={() => {
-                    console.log("pointer");
-                }}
-                className={cn("top-0 backdrop-blur-md flex rtl:right-0 ltr-left-0 z-[100] ltr:border-r-1 rtl:border-l-1 dark:border-gold border-dark h-screen w-7/12 bg-white/30 dark:bg-dark/50")}>
+                className="backdrop-blur-[3px] dark:backdrop-blur-md bg-white/90 dark:bg-dark/90 top-0 flex rtl:right-0 ltr-left-0 z-[100] ltr:border-r-1 rtl:border-l-1 dark:border-gold border-dark h-screen w-7/12">
                 <ul className="w-full h-full flex-col mb-10 flex ">
                     {drawerList.map((item: ListDrawer, index: any) => renderItem(item, index))}
 
@@ -167,7 +164,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                             cursor-pointer
                             ">
                             <span
-                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-poppins block sm:text-xl text-dark dark:text-gold'>{ t("theme")}</span>
+                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-poppins block sm:text-xl text-dark dark:text-gold'>{t("theme")}</span>
                             {locale == "fa" ? theme == "dark" ? <IconArrowleftGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "-rotate-90" : "")} /> : <IconArrowleftDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "-rotate-90" : "")} /> : theme == "dark" ? <IconArrowRightGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "rotate-90" : "")} /> : <IconArrowRightDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "rotate-90" : "")} />}
                         </div>
                         <div

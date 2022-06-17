@@ -134,7 +134,6 @@ module.exports = {
                 black:'##0a0a0a',
                 light: "#F7F7F7",
                 dark: "#101010",
-                
                 gray:{
                     dark:"#464646",
                     light: "#989898",
