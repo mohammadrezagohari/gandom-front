@@ -3,39 +3,62 @@ import { useTheme } from "next-themes";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router'
-import Link from 'next/link';
 import cn from "classnames";
 
+import styles from "./Home.module.scss"
 import { Layout } from '@components/common';
+import JoinTeamdasrk from "@assets/svg/JoinTeamdasrk.svg";
+import { Button } from '@components/ui';
+import Counter from '@components/ui/Counter';
+
 interface HomeProps {
     locale?: any
 }
 
 const Home: FC<HomeProps> = (props) => {
-    // const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
     const { t } = useTranslation('translation');
-    const router = useRouter()
-    const [show, setShow] = useState<boolean>(true);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
 
-    console.log("routename:", router.pathname);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+        window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <Layout title="Gandom" footer>
-            <div className="flex flex-col items-start justify-start min-h-screen py-2 px-4">
-                <h1 className='font-serif font-bold text-4xl text-gold w-4/12 leading-snug text-justify'>Our specialty is the reason for your trust</h1>
-                <p className='font-poppines font-regular text-gray-default mt-8 text-base w-96 text-justify'>
-                    Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI/UX design.
-                </p>
-
-                {/* <div
-                    onClick={() => {
-                        setShow(!show); alert("kljdklsdjkl");
-                    }}
-                    className={cn('w-48 h-48 bg-white absolute flex items-center justify-center')}>
-                    <div className='w-20 h-20 bg-gold flex self-center'>
-
+            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
+                <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
+                    <div className='w-full md:w-6/12 xl:w-7/12 flex flex-col items:center justify-center md:items-start md:justify-start mt-0 sm:mt-13 md:mt-0'>
+                        <h1 className='font-serif font-bold text-5xl text-dark dark:text-gold leading-snug sm:text-center md:text-start xl:text-justify'>{t("title1")}<br/>{t("title2")}</h1>
+                        <p className='font-poppines font-regular dark:text-gray-default text-gray-dark mt-8 text-xl leading-9 xl:w-8/12 md:w-11/12 text-center md:text-start xl:text-justify'>
+                            {t("discription")}
+                        </p>
+                        <div className='flex md:jusctify-start justify-center items-center mt-14'>
+                            <Button
+                                title={t("aboutUs")}
+                                mode='outlined'
+                            />
+                            <Button
+                                title={t("orderBtn")}
+                                mode='contained'
+                                styleCustom='mx-14'
+                            />
+                        </div>
                     </div>
-                </div> */}
+                    <div className='sm:w-10/12 md:w-5/12 xl:w-7/12  flex flex-col items-center justify-center'>
+                        <JoinTeamdasrk className='w-full xl:h-[30rem] flex self-center z-[50]' />
+                        <div className={cn("w-24 h-24 absolute bg-gold rounded-full", { [styles.shadow]: true })} ></div>
+                    </div>
+                </section>
+                <section className='w-full h-[35rem] md:h-[38rem] flex justify-center items-center'>
+                    <Counter start={scrollPosition} />
+                </section>
             </div>
         </Layout>
     )

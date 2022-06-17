@@ -29,13 +29,7 @@ const Header: FC<HeaderProps> = () => {
         open: false,
         value: ""
     });
-    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
     const [show, setShow] = useState<boolean>(false);
-
-    useEffect(() => {
-        console.log("show", show);
-    }, [show])
-
 
     //detect a click outside dropdown
     const onClickOutside = () => {
@@ -57,7 +51,6 @@ const Header: FC<HeaderProps> = () => {
 
     //translate screens Hook
     const { t } = useTranslation('translation');
-    // console.log("open", dropdown.open);
 
     // darkMode Config
     const [mounted, setMounted] = useState(false);
@@ -73,7 +66,7 @@ const Header: FC<HeaderProps> = () => {
     return (
         <>
             <DrawerContent visible={show} setVisible={setShow} />
-            <nav className="backdrop-blur-[3px] bg-white/30 pt-4 w-full border-gray-light fixed top-0 px-2 py-2.5 dark:bg-dark justify-around items-center flex border-zinc-300 border-b">
+            <nav className="backdrop-blur-[3px] z-[200] dark:backdrop-blur-md bg-white/30 pt-4 w-full border-gray-light fixed top-0 xl:px-20 md:px-5 px-2 py-2.5 dark:bg-dark/50 justify-around items-center flex border-zinc-300 border-b">
                 <div className="relative w-full mx-10 md:mx-7 hidden md:flex flex-wrap justify-between items-center ">
                     <div dir="ltr" className='flex flex-row rtl:justify-end order-1 w-2/12'>{theme === "dark" ? (<LogoLight className='w-36 h-16' />) : <LogoDark className='w-36 h-16' />}</div>
                     <div className="hidden md:flex order-2 xl:w-5/12 lg:w-6/12" id="mobile-menu-4">
@@ -181,7 +174,6 @@ const Header: FC<HeaderProps> = () => {
                 <div className="w-full mx-0 flex md:hidden flex-wrap justify-between items-center ">
                     <div
                         onClick={(): void => {
-                            console.log("kjhkj", show);
                             setShow(true)
                         }}
                         className='flex w-4/12 justify-start items-center'>

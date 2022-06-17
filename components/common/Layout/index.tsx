@@ -51,7 +51,7 @@ const Layout: FC<LayoutProps> = ({
                 </Head>
                 <div className="relative rounded dark:bg-dark flex flex-col w-full min-h-screen justify-center items-center bg-white ">
                     <Header />
-                    <main className="w-full min-h-screen dark:bg-black mt-40">{children}</main>
+                    <main className="w-full min-h-screen dark:bg-black mt-24">{children}</main>
                 </div>
             </div >
         </>

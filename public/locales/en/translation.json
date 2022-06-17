@@ -10,5 +10,13 @@
     "dark": "Dark",
     "light": "Light",
     "theme": "Theme",
-    "lang" : "Language"
+    "lang" : "Language",
+    "aboutUs" : "About Us",
+    "orderBtn" : "Order",
+    "staff": "Staff",
+    "inProcess" : "In Process",
+    "allProject": "All Project",
+    "title1":"Our specialty is the reason ",
+    "title2":"for your trust",
+    "discription": "Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI / UX design."
 }
