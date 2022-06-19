@@ -18,5 +18,11 @@
     "allProject": "All Project",
     "title1":"Our specialty is the reason ",
     "title2":"for your trust",
-    "discription": "Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI / UX design."
+    "discription": "Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI / UX design.",
+    "webDesign": "Web Design",
+    "appDesign" : "App Design",
+    "uxuxDesign": "UI/UX Design",
+    "graphicDesign": "Graphic Design",
+    "softWareDesign": "Softeware Design",
+    "seo": "Seo"
 }

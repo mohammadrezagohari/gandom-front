@@ -6,10 +6,11 @@ import { useRouter } from 'next/router'
 import cn from "classnames";
 
 import styles from "./Home.module.scss"
-import { Layout } from '@components/common';
+import { Layout, Slider } from '@components/common';
 import JoinTeamdasrk from "@assets/svg/JoinTeamdasrk.svg";
 import { Button } from '@components/ui';
 import Counter from '@components/ui/Counter';
+import Tab from '@components/common/Tab/Tab';
 
 interface HomeProps {
     locale?: any
@@ -59,6 +60,10 @@ const Home: FC<HomeProps> = (props) => {
                 <section className='w-full h-[35rem] md:h-[38rem] flex justify-center items-center'>
                     <Counter start={scrollPosition} />
                 </section>
+                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-15">
+                    <Tab/>
+                </section>
+
             </div>
         </Layout>
     )

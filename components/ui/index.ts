@@ -4,4 +4,7 @@ export { default as HorizontalList } from './HorizontalList';
 export { default as Modal } from './Modal';
 export { default as DropDown } from './Dropdown';
 export { default as Counter } from './Counter';
+export { default as Card } from './Card';
+
+
 
