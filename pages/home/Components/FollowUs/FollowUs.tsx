@@ -69,7 +69,7 @@ const FollowUs = () => {
                 <span className="h-[3px] w-full bg-dark dark:bg-gold" />
             </div>
             <div className='w-full md:flex'>
-                <div className="sm:w-10/12 md:w-7/12 xl:w-7/12 mt-10 flex flex-col ltr:items-start rtl:items-end justify-center">
+                <div className="sm:w-10/12 md:w-7/12 xl:w-7/12 mt-10 flex flex-col items-start justify-center">
                     {linkData.map((item, index) => {
                         return renderItem(item, index)
                     })}
