@@ -1,12 +1,9 @@
 //@ts-nocheck
-import React, { FC, ReactNode, useCallback, useState, useEffect } from 'react';
+import React, { FC, ReactNode, useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router'
-import Link from 'next/link';
 import { useTheme } from 'next-themes';
-import LightIcon from '@assets/svg/gold/lighticon.svg';
-import MoonIcon from '@assets/svg/blcak/moon.svg';
 
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -15,7 +12,6 @@ export interface LayoutProps {
     children: ReactNode;
     footer?: boolean;
     title?: string;
-    // selected?: 'home' | 'wallet' | 'cart' | 'profile';
 }
 
 const Layout: FC<LayoutProps> = ({
@@ -51,7 +47,7 @@ const Layout: FC<LayoutProps> = ({
                 </Head>
                 <div className="relative rounded dark:bg-dark flex flex-col w-full min-h-screen justify-center items-center bg-white ">
                     <Header />
-                    <main className="w-full min-h-screen dark:bg-black mt-24 pb-36">{children}</main>
+                    <main className="w-full min-h-screen dark:bg-black pb-24 pt-28">{children}</main>
                     <Footer/>
                 </div>
             </div >

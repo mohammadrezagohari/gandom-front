@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import cn from "classnames";
 
 import styles from "./Home.module.scss"
-import { Layout, Slider } from '@components/common';
+import { Layout, SliderColumn } from '@components/common';
 import HomeLogo from "@assets/svg/home.svg";
 import { Button } from '@components/ui';
 import { FollowUs, HomeSlider, JoinForm, Tab } from "./Components"

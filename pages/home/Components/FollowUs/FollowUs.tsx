@@ -68,14 +68,14 @@ const FollowUs = () => {
                 </h2>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold" />
             </div>
-            <div className='w-full md:flex'>
-                <div className="sm:w-10/12 md:w-7/12 xl:w-7/12 mt-10 flex flex-col items-start justify-center">
+            <div className='w-full md:flex '>
+                <div className="sm:w-12/12 md:w-7/12 xl:w-7/12 mt-10 flex flex-col items-center md:items-start justify-center">
                     {linkData.map((item, index) => {
                         return renderItem(item, index)
                     })}
                 </div>
-                <div className='sm:w-10/12 md:w-5/12 xl:w-5/12 mt-10 flex flex-col items-center justify-center'>
-                    {theme == "dark" ? <FollowDark className='w-full xl:h-[30rem] flex self-center z-[50]' /> : <FollowLight className='w-full xl:h-[30rem] flex self-center z-[50]' />}
+                <div className='sm:w-12/12 md:w-5/12 xl:w-5/12 mt-10 flex flex-col items-center justify-center'>
+                    {theme == "dark" ? <FollowDark className='w-full h-[20rem] md:h-[30rem] flex self-center z-[50]' /> : <FollowLight className='w-full xl:h-[30rem] flex self-center z-[50]' />}
 
                 </div>
             </div>
