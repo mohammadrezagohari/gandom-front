@@ -34,9 +34,9 @@ const Counter = (start: any) => {
     const renderItem = (item: itemType, index: number) => {
         return (
             <>
-                <div className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
-                    <span className="value text-5xl md:text-7xl dark:text-gold text-dark font-poppines font-bold" count={item.count} key={index}>0</span>
-                    <span className='text-xl md:text-2xl text-white text-center font-poppines font-medium'>{item.title}</span>
+                <div key={index} className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
+                    <span className="value text-5xl md:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} key={index}>0</span>
+                    <span className='text-xl md:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
                 </div>
                 {index == 0 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
                 {index == 1 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
@@ -64,7 +64,7 @@ const Counter = (start: any) => {
     });
 
     return (
-        <div className="content flex w-full items-center justify-between" >
+        <div className="content flex w-full items-center justify-between my-28" >
             <div className='md:flex hidden w-2/12 h-[10rem] md:h-[14rem] justify-center items-center'>
                 <span className='w-[10px] h-[10px] dark:bg-gold rounded-full bg-dark'></span>
                 <span className='w-full h-[3px] bg-dark dark:bg-gold'></span>

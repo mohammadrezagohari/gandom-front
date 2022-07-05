@@ -31,3 +31,31 @@
   font-weight: "Notobold";
   font-style: normal;
 }
+
+/* yekanbakh */
+@font-face {
+    font-family: "Yekanbakh";
+    font-style: normal;
+    font-weight: "light";
+    src: url('../fonts/yekanbakh/Yekanbakh-Light.ttf');
+}
+@font-face {
+  font-family: "Yekanbakh";
+  src: url('../fonts/yekanbakh/Yekanbakh-Medium.ttf');
+  font-weight: "medium";
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "Yekanbakh";
+  src: url('../fonts/yekanbakh/Yekanbakh-Regular.ttf');
+  font-weight: "regular";
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "Yekanbakh";
+  src: url('../fonts/yekanbakh/Yekanbakh-Bold.ttf');
+  font-weight: "bold";
+  font-style: normal;
+}

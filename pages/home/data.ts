@@ -99,7 +99,56 @@ export const SliderDataApp = [
     },
 ]
 
-//slider data web
+//slider data Team
+export const TeamData = [
+    {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 1
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 2
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 3
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 4
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 5
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 6
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 7
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 8
+    }, {
+        url: "/profile.png",
+        alt: "Pezeshk Amoz yalda landing",
+        caption: "Pezeshk Amoz yalda landing",
+        id: 9
+    },
+]
+
 export const SliderDataWeb = [
     {
         url: "/demoBlue.png",

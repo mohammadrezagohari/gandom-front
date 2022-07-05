@@ -82,7 +82,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                 className="w-full border-b-1 border-dark dark:border-gold px-4 py-7 flex items-center">
                 <Link href={item.href}>
                     <span
-                        className={cn("text-justify ltr:ml-2 rtl:mr-2 font-light ltr:text-start rtl:text-end font-poppins block sm:text-xl text-dark dark:text-gold",
+                        className={cn("text-justify ltr:ml-2 rtl:mr-2 font-light ltr:text-start rtl:text-end font-Poppins rtl:font-Yekanbakh block sm:text-xl text-dark dark:text-gold",
                             item.href === pathname ? "border-b-2 border-dark dark:border-gold text-dark dark:text-gold sm:text-2xl" : ""
                         )}>{t(item.title)}</span>
 
@@ -107,7 +107,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                             cursor-pointer
                             ">
                             <span
-                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-poppins block sm:text-xl text-dark dark:text-gold'>{t("lang")}</span>
+                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-Poppins block sm:text-xl text-dark dark:text-gold'>{t("lang")}</span>
                             {locale == "fa" ? theme == "dark" ? <IconArrowleftGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown.open ? "-rotate-90" : "")} /> : <IconArrowleftDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown.open ? "-rotate-90" : "")} /> : theme == "dark" ? <IconArrowRightGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown.open ? "rotate-90" : "")} /> : <IconArrowRightDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown.open ? "rotate-90" : "")} />}
                         </div>
                         <div
@@ -127,7 +127,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                                     />
                                     <span
                                         onClick={() => setdropdown({ open: false, value: t("zabanfarsi") })}
-                                        className="hover:font-bold cursor-pointer text-justify font-light font-poppins block py-2 px-3 text-sm dark:text-gold text-dark"
+                                        className="hover:font-bold cursor-pointer text-justify font-light font-Poppins block py-2 px-3 text-sm dark:text-gold text-dark"
                                     >
 
                                         {t("langFa")}
@@ -149,7 +149,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                                     />
                                     <span
                                         onClick={() => setdropdown({ open: false, value: t("zabanEn") })}
-                                        className="hover:font-bold cursor-pointer text-justify font-light font-poppins block py-2 px-3 text-sm dark:text-gold text-dark"
+                                        className="hover:font-bold cursor-pointer text-justify font-light font-Poppins block py-2 px-3 text-sm dark:text-gold text-dark"
                                     >
                                         {t("langEn")}
                                     </span>
@@ -164,7 +164,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                             cursor-pointer
                             ">
                             <span
-                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-poppins block sm:text-xl text-dark dark:text-gold'>{t("theme")}</span>
+                                className='text-justify ltr:ml-1 rtl:mr-1 font-light ltr:text-start rtl:text-end font-Poppins block sm:text-xl text-dark dark:text-gold'>{t("theme")}</span>
                             {locale == "fa" ? theme == "dark" ? <IconArrowleftGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "-rotate-90" : "")} /> : <IconArrowleftDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "-rotate-90" : "")} /> : theme == "dark" ? <IconArrowRightGold className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "rotate-90" : "")} /> : <IconArrowRightDark className={cn('w-10 h-5 transition duration-100 ease-in-out', dropdown2.open ? "rotate-90" : "")} />}
                         </div>
                         <div
@@ -179,7 +179,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                                 />
                                 <span
                                     onClick={() => setdropdown({ open: false, value: t("zabanfarsi") })}
-                                    className="hover:font-bold cursor-pointer text-justify font-light font-poppins block py-2 px-3 text-sm dark:text-gold text-dark"
+                                    className="hover:font-bold cursor-pointer text-justify font-light font-Poppins block py-2 px-3 text-sm dark:text-gold text-dark"
                                 >
 
                                     {t("light")}
@@ -194,7 +194,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
                                 />
                                 <span
                                     onClick={() => setdropdown({ open: false, value: t("zabanEn") })}
-                                    className="hover:font-bold cursor-pointer text-justify font-light font-poppins block py-2 px-3 text-sm dark:text-gold text-dark"
+                                    className="hover:font-bold cursor-pointer text-justify font-light font-Poppins block py-2 px-3 text-sm dark:text-gold text-dark"
                                 >
 
                                     {t("dark")}

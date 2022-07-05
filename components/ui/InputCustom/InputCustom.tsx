@@ -1,47 +1,48 @@
-import classNames from 'classnames';
-import React, { DetailedHTMLProps, FC, ReactNode,InputHTMLAttributes } from 'react';
-import styles from "./InputCustom.module.scss";
-import { FunctionComponent, useState } from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import React, { FC } from 'react';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement>  {
-    lable?: string;
+import {ErrorMessage} from '@components/ui';
+import styles from './InputCustom.module.scss';
+
+export interface InputProps {
     placeholder?: string;
-    errorText?: string;
+    label?: string;
+    name?: string;
+    error?: string;
+    value?: any;
+    handleChange?: any;
+    type?: string;
+    touched?: any;
+    onBlur?: any
 }
-const InputCustom: FC<InputProps> = ({lable,placeholder,errorText,...props}) => {
-    const [message, setMessage] = useState(''); // This will be used to show a message if the submission is successful
-    const [submitted, setSubmitted] = useState(false);
-
-    const formik = useFormik({
-        initialValues: {
-          email: '',
-          name: '',
-          message: '',
-        },
-        onSubmit: () => {
-          setMessage('Form submitted');
-          setSubmitted(true);
-        },
-        validationSchema: yup.object({
-          name: yup.string().trim().required('Name is required'),
-          email: yup
-            .string()
-            .email('Must be a valid email')
-            .required('Email is required'),
-          message: yup.string().trim().required('Message is required'),
-        }),
-      });
+const InputCustom: FC<InputProps> = ({
+    placeholder,
+    label,
+    name,
+    type,
+    value,
+    error,
+    touched,
+    onBlur,
+    handleChange = () => { },
+    ...props
+}) => {
     return (
-        <div className={classNames({[styles.inputWrapper]: true})}>
-            {lable ? <span>{lable}</span> : null}
+        <label className={styles.container} htmlFor="firstName">
+            <span className={styles.label}>{label}</span>
             <input
+                className={styles.input}
+                type={type}
                 placeholder={placeholder}
+                name={name}
+                onChange={handleChange}
+                onBlur={onBlur}
+                value={value}
             />
-            <span >{errorText}</span>
-        </div>
-        );
+            <div className={styles.errorContainer}>
+                {error && touched ? (<ErrorMessage error={error} />) : null}
+            </div>
+        </label>
+    );
 };
 
 export default InputCustom;

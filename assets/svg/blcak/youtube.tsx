@@ -1,0 +1,17 @@
+import React, { FC } from "react";
+
+interface Fill {
+  fill?: string,
+  width?: string,
+  height?: string
+}
+const Youtube: FC<Fill> = ({ fill, width, height }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={width && "24"} height={height && "16.728"} viewBox="0 0 24 16.728">
+      <g id="youtube-symbol-svgrepo-com" transform="translate(0 -14.676)">
+        <path id="Path_579" data-name="Path 579" d="M23.585,17.367a3.032,3.032,0,0,0-2.595-2.359A80.642,80.642,0,0,0,12,14.676a80.655,80.655,0,0,0-8.988.332A3.032,3.032,0,0,0,.423,17.367,25.7,25.7,0,0,0,0,23.04a25.7,25.7,0,0,0,.418,5.673,3.031,3.031,0,0,0,2.594,2.359A80.584,80.584,0,0,0,12,31.4a80.569,80.569,0,0,0,8.987-.332,3.033,3.033,0,0,0,2.594-2.359A25.683,25.683,0,0,0,24,23.04,25.7,25.7,0,0,0,23.585,17.367ZM8.9,26.765V18.829l7.63,3.981Z" fill={fill} />
+      </g>
+    </svg>
+  )
+}
+export default Youtube

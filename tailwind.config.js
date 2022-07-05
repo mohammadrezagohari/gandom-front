@@ -113,8 +113,9 @@ module.exports = {
                 '128': '10rem',
             },
              fontFamily: {
-                 'poppines': ['poppines'],
-                 'serif': ['serif']
+                 'poppins': ['Poppins'],
+                 'serif': ['serif'],
+                 'Yekanbakh': ['Yekanbakh']
             },
             fontWeight: {
                 'light': 300,
@@ -131,7 +132,7 @@ module.exports = {
                 current: 'currentColor',
                 blur:"#ffffff33",
                 white: '#ffffff',
-                black:'##0a0a0a',
+                black:'#0a0a0a',
                 light: "#F7F7F7",
                 dark: "#101010",
                 gray:{
