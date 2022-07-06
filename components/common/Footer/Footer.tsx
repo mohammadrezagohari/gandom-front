@@ -1,19 +1,14 @@
 import { useTheme } from 'next-themes';
 import React, { FC } from 'react';
 import { useTranslation } from 'next-i18next';
-// import HomeIcon from '@assets/svg/homeIcon.svg';
-// import UserIcon from '@assets/svg/UserIcon.svg';
-// import WalletIcon from '@assets/svg/walletIcon.svg';
-// import CartIcon from '@assets/svg/shoppingCartIcon.svg';
+
 import LogoLight from '@assets/svg/gold/gandom-gold.svg';
 import LogoDark from '@assets/svg/blcak/gandom-black.svg';
-import Image from 'next/image';
 import InstagramGold from "@assets/svg/gold/instagramGold";
-interface FooterProps {
-    selected: 'home' | 'Order' | 'ourWorks' | 'ourTeam' | 'aboutus' | undefined;
-}
 
-const Footer: FC<FooterProps> = ({ selected }) => {
+
+
+const Footer = () => {
 
     //translate screens Hook
     const { t } = useTranslation('translation');
@@ -88,7 +83,7 @@ const Footer: FC<FooterProps> = ({ selected }) => {
             </div>
             <div className='flex dark:bg-dark bg-gray-dark w-full px-10 xl:px-32 py-8 space-x-4 justify-center items-center'>
                 <span className='h-[2px] w-3/12 xl:w-4/12 bg-white md:flex hidden' />
-                <h6 className='sm:w-full xl:w-4/12 md:w-6/12 text-white text-center rtl:font-Yekanbakh font-Poppins font-medium text-[10px] md:text-[11px] xl:text-sm'>تمامی حقوق این سایت متعلق به گروه نرم افزاری گندم می باشد</h6>
+                <h6 className='sm:w-full xl:w-4/12 md:w-6/12 text-white text-center font-Poppins rtl:font-Yekanbakh font-medium text-[10px] md:text-[11px] xl:text-sm'>{t("footerText")}</h6>
                 <span className='h-[3px] xl:w-4/12 w-3/12 bg-white md:flex hidden' />
             </div>
         </div>

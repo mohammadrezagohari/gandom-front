@@ -113,12 +113,12 @@ module.exports = {
                 '128': '10rem',
             },
              fontFamily: {
-                 'poppins': ['Poppins'],
-                 'serif': ['serif'],
+                 'Poppins': ['Poppins'],
+                 'NotoSerif': ['NotoSerif'],
                  'Yekanbakh': ['Yekanbakh']
             },
             fontWeight: {
-                'light': 300,
+                'light': 100,
                 "medium": 500,
                 "bold": 600,
                 "regular":400

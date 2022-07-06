@@ -96,7 +96,7 @@ const Header: FC<HeaderProps> = () => {
                             </li>
                             <li className='flex justify-center align-center  md:mr-2 md:ml-2'>
                                 <NavLink
-                                    href="/aboutus"
+                                    href="/aboutUs"
                                     title='aboutus'
                                 />
                             </li>
@@ -113,13 +113,13 @@ const Header: FC<HeaderProps> = () => {
                                             <LightIcon className='w-4 h-4' />
                                         </div>
                                         <div className='hidden lg:flex bg-dark px-3 h-full justify-center items-center transition duration-700 ease-in-out'>
-                                            <span className='text-gold font-light font-Poppins'>{t("light")}</span>
+                                            <span className='text-gold font-light font-Poppins rtl:font-Yekanbakh'>{t("light")}</span>
                                         </div>
                                     </div>)
                                     :
                                     (<div className='w-full flex flex-row h-full'>
                                         <div className='hidden lg:flex bg-white px-3 h-full justify-center items-center transition duration-700 ease-in-out'>
-                                            <span className='text-dark font-light font-Poppins'>{t("dark")}</span>
+                                            <span className='text-dark font-light font-Poppins rtl:font-Yekanbakh'>{t("dark")}</span>
                                         </div>
                                         <div className='flex bg-dark px-2 h-full justify-center items-center transition duration-700 ease-in-out'>
                                             <MoonIcon className='w-4 h-4' />
@@ -134,7 +134,7 @@ const Header: FC<HeaderProps> = () => {
                             cursor-pointer self-center
                             ">
                             <span
-                                className='text-center font-light font-Poppins text-dark dark:text-gold text-sm'>{router.locale === "fa" ? "Fa" : "En"}</span>
+                                className='text-center font-light font-Poppins rtl:font-Yekanbakh rtl:mt-1 text-dark dark:text-gold text-sm'>{router.locale === "fa" ? "Fa" : "En"}</span>
                         </div>
 
                         <div
@@ -148,7 +148,7 @@ const Header: FC<HeaderProps> = () => {
                             >
                                 <span
                                     onClick={() => setdropdown({ open: false, value: t("zabanfarsi") })}
-                                    className="hover:font-bold cursor-pointer text-justify font-light font-Poppins rtl:font-Yekanbakhblock py-2 px-3 text-sm dark:text-gold text-dark"
+                                    className="hover:font-bold cursor-pointer text-justify font-light font-Poppins  block py-2 px-3 text-sm dark:text-gold text-dark"
                                 >
                                     {t("langFa")}
                                 </span>

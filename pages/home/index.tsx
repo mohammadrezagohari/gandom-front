@@ -31,11 +31,11 @@ const Home: FC<HomeProps> = (props) => {
     }, []);
 
     return (
-        <Layout title="Gandom" footer>
+        <Layout title="Gandom" >
             <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <div className='w-full md:w-6/12 xl:w-7/12 flex flex-col items:center justify-center md:items-start md:justify-start mt-0 sm:mt-13 md:mt-0'>
-                        <h1 className='font-serif rtl:font-Yekanbakh mt-10 md:mt-0 font-bold text-5xl text-dark dark:text-gold leading-snug sm:text-center md:text-start xl:text-justify'>{t("title1")}<br />{t("title2")}</h1>
+                        <h1 className='font-NotoSerif rtl:font-Yekanbakh mt-10 md:mt-0 font-bold text-5xl text-dark dark:text-gold leading-snug sm:text-center md:text-start xl:text-justify'>{t("title1")}<br />{t("title2")}</h1>
                         <p className='font-Poppins rtl:font-Yekanbakh font-regular dark:text-gray-default text-gray-dark mt-8 text-xl leading-9 xl:w-8/12 md:w-11/12 text-center md:text-start xl:text-justify'>
                             {t("discription")}
                         </p>

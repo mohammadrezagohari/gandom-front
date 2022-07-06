@@ -15,7 +15,7 @@ const OurTeam: FC<OurTeamProps> = (props) => {
     const { t } = useTranslation('translation');
 
     return (
-        <Layout title="Gandom" footer>
+        <Layout title="Gandom" >
             <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <WorksSlider list={TeamData} sliderMode='double' title='OurTeam'/>

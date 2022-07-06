@@ -10,14 +10,12 @@ import Header from '../Header/Header';
 
 export interface LayoutProps {
     children: ReactNode;
-    footer?: boolean;
     title?: string;
 }
 
 const Layout: FC<LayoutProps> = ({
     children,
     title,
-    footer
 }) => {
 
     const router = useRouter()
