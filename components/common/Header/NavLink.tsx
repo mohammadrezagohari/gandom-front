@@ -12,12 +12,14 @@ const NavLink: React.FC<NavLinkProps> = ({ title, href }) => {
 
     const { t } = useTranslation('translation');
     const { pathname } = useRouter();
+    
+    console.log("path",pathname , href);
 
     return (
         <Link href={href}>
             <div className={cn("block pt-2 pr-4 pl-3 md:pr-1 md:pl-1 text-gray-light border-b-2 border-transparent cursor-pointer hover:border-dark hover:text-dark hover:dark:border-gold dark:hover:text-gold dark:text-gray-light transition duration-200 ease-in-out",
-                href === pathname ? "border-b-2 border-dark dark:border-gold text-dark dark:text-gold" : "")}>
-                <span className="text-justify font-light font-Poppins rtl:font-Yekanbakh block text-base ">{t(title)}</span>
+                href === pathname ? "border-b-2 border-black dark:border-gold text-dark dark:text-gold" : "")}>
+                <span className="text-justify font-light font-Poppins rtl:font-Yekanbakh block text-base">{t(title)}</span>
             </div>
         </Link>
     );

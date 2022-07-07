@@ -18,7 +18,7 @@ const Footer = () => {
 
     return (
         <div className="w-full relative bottom-0  flex flex flex-col z-[10000]">
-            <div className='dark:bg-gray-darkFull Full bg-gray-light w-full px-20 xl:px-32 pt-7'>
+            <div className='dark:bg-gray-darkFull Full bg-gray-light w-full px-20 xl:px-28 pt-7'>
                 <div className='pb-10 p-3 flex-col xl:flex justify-between items-center border-b-2 dark:border-gray-dark border-gray-dark'>
                     <div className='w-full flex flex-col justify-between items-center self-start'>
                         <div className='w-full'>
@@ -81,7 +81,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex dark:bg-dark bg-gray-dark w-full px-10 xl:px-32 py-8 space-x-4 justify-center items-center'>
+            <div className='flex dark:bg-dark bg-gray-dark w-full px-10 xl:px-28 py-8 space-x-4 justify-center items-center'>
                 <span className='h-[2px] w-3/12 xl:w-4/12 bg-white md:flex hidden' />
                 <h6 className='sm:w-full xl:w-4/12 md:w-6/12 text-white text-center font-Poppins rtl:font-Yekanbakh font-medium text-[10px] md:text-[11px] xl:text-sm'>{t("footerText")}</h6>
                 <span className='h-[3px] xl:w-4/12 w-3/12 bg-white md:flex hidden' />
