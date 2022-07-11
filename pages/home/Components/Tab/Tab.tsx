@@ -2,9 +2,10 @@ import cn from "classnames";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
-import { CardProps } from "@components/ui/Card/Card";
+import Card, { CardProps } from "@components/ui/Card/Card";
 import { SliderDataSeo, SliderDataWeb, SliderDataApp } from "@pages/home/data";
 import Slider from "../../../../components/common/Slider";
+import PersonalCard from "@components/ui/PersonalCard";
 
 const tabs = [
     { label: 'webDesign', data: SliderDataSeo, id: 1 },
@@ -15,6 +16,10 @@ const tabs = [
     { label: 'seo', data: SliderDataApp, id: 6 },
 ]
 
+const CardType = {
+    personal: PersonalCard,
+    general: Card,
+}
 const Tab = () => {
     const [tabValue, setTabValue] = useState<number>()
     const [first, setfirst] = useState<CardProps[]>([])
@@ -49,7 +54,7 @@ const Tab = () => {
                 })}
             </ul>
             <div className="w-full ">
-                <Slider list={first} />
+                <Slider list={first} cardMode="general"/>
             </div>
         </div>
     );
