@@ -1,14 +1,21 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import cn from 'classnames';
 interface ModalProps {
     children: ReactNode;
     visible: boolean;
-    onClose: VoidFunction;
+    onClose?: VoidFunction;
 }
 
 const Modal: React.FC<ModalProps> = ({ children, onClose, visible }) => {
+    const [visibleModal, setvisibleModal] = useState(visible);
+    useEffect(() => {
+    setvisibleModal(visible)
+    }, [visible])
+
     return (
-        <>
+        <div
+            onClick={()=> setvisibleModal(false)}
+            className={cn('w-[30rem] h-[10rem] bg-gold absolute', !visibleModal ? "hidden" : "flex")}>
             {visible && (
                 <div
                     onClick={onClose}
@@ -23,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ children, onClose, visible }) => {
             >
                 {visible && <div className=" fixed animate-opacity z-50 ">{children}</div>}
             </div>
-        </>
+        </div>
     );
 };
 

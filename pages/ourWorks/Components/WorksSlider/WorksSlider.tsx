@@ -5,7 +5,7 @@ import { CardProps } from "@components/ui/Card";
 
 interface WorksSliderProps {
     list: CardProps[],
-    cardMode?: string,
+    cardMode: "personal" | "general",
     title: string,
     sliderMode?: "single" | "double" 
 }

@@ -1,12 +1,17 @@
 import React, { FC } from "react";
 import { useTranslation } from "next-i18next";
 import { Slider } from "@components/common";
-import { CardProps } from "@components/ui/Card";
+import Card, { CardProps } from "@components/ui/Card";
+import PersonalCard from "@components/ui/PersonalCard";
 
 interface HomeSliderProps {
     list: CardProps[],
-    cardMode?: string,
+    cardMode: "personal" | "general",
     title: string
+}
+const CardType = {
+    personal: PersonalCard,
+    general: Card,
 }
 
 const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {

@@ -21,11 +21,16 @@ import { useTranslation } from "next-i18next";
 
 export interface SliderProps {
     list: CardProps[],
-    cardMode?: string
+    cardMode: "personal" | "general",
+}
+
+const CardType = {
+    personal: PersonalCard,
+    general: Card,
 }
 
 const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
-
+    const CardComponent = CardType[cardMode];
     //customiz next and prev button
     const navigationPrevRef = React.useRef(null)
     const navigationNextRef = React.useRef(null)
@@ -53,7 +58,7 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                             slidesPerView: 2
                         },
                     }}
-                    spaceBetween={60}
+                    spaceBetween={30}
                     slidesPerGroup={3}
                     loop={true}
                     loopFillGroupWithBlank={true}
@@ -71,32 +76,20 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                                 key={index}
                             >
                                 <div className="w-12/12 flex flex-col justify-center items-center">
-                                    {cardMode == "personal" ?
-                                        <PersonalCard
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        /> :
-                                        <Card
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        />
-                                    }
+                                    <CardComponent
+                                        url={item.url}
+                                        alt={item.alt}
+                                        caption={item.caption}
+                                        hrefCard={item.hrefCard}
+                                    />
                                 </div>
                                 <div className="w-12/12 mt-12 flex flex-col justify-center items-center">
-                                    {cardMode == "personal" ?
-                                        <PersonalCard
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        /> :
-                                        <Card
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        />
-                                    }
+                                    <CardComponent
+                                        url={item.url}
+                                        alt={item.alt}
+                                        caption={item.caption}
+                                        hrefCard={item.hrefCard}
+                                    />
                                 </div>
                             </SwiperSlide>
                         )

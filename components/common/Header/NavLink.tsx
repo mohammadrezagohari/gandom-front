@@ -12,8 +12,6 @@ const NavLink: React.FC<NavLinkProps> = ({ title, href }) => {
 
     const { t } = useTranslation('translation');
     const { pathname } = useRouter();
-    
-    console.log("path",pathname , href);
 
     return (
         <Link href={href}>
