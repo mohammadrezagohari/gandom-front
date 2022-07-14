@@ -7,9 +7,10 @@ class Thumb extends React.Component {
     state = {
         loading: false,
         thumb: undefined,
+        file: null
     };
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps: any) {
         if (!nextProps.file) { return; }
 
         this.setState({ loading: true }, () => {
@@ -24,7 +25,7 @@ class Thumb extends React.Component {
     }
 
     render() {
-        const { file } = this.props;
+        const { file } : any = this.props;
         const { loading, thumb } = this.state;
 
         if (!file) { return null; }
@@ -45,7 +46,7 @@ class App extends React.Component {
             <div className="container">
                 <Formik
                     initialValues={{ file: null }}
-                    onSubmit={(values) => {
+                    onSubmit={(values: any) => {
                         alert(
                             JSON.stringify(
                                 {
@@ -66,10 +67,10 @@ class App extends React.Component {
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label for="file">File upload</label>
-                                    <input id="file" name="file" type="file" onChange={(event) => {
+                                    <input id="file" name="file" type="file" onChange={(event : any) => {
                                         setFieldValue("file", event.currentTarget.files[0]);
                                     }} className="form-control" />
-                                    <Thumb file={values.file} />
+                                    {/* <Thumb file={values.file} /> */}
                                 </div>
                                 <button type="submit" className="btn btn-primary">submit</button>
                             </form>

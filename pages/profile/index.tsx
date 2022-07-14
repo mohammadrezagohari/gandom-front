@@ -7,10 +7,8 @@ const Profile: React.FC = () => {
     const { t } = useTranslation('translation');
     const router = useRouter()
     return (
-        <Layout footer banner searchBar selected="profile">
+        <Layout>
             <div className="">this is profile page</div>;
-            
-            
         </Layout>
     );
 };

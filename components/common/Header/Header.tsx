@@ -74,6 +74,7 @@ const Header: FC<HeaderProps> = () => {
                                 <NavLink
                                     href="/home"
                                     title='home'
+                                    
                                 />
                             </li>
                             <li className='flex justify-center align-center md:mr-2 md:ml-2'>

@@ -8,7 +8,7 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = (props) => {
     return (
-        <Layout title="Gandom" footer >
+        <Layout title="Gandom" >
         </Layout>
     )
 }
