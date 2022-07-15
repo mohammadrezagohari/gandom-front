@@ -11,13 +11,13 @@ const Basket: FC<BasketProps> = (props) => {
     const router = useRouter()
     const { t } = useTranslation('translation');
     return (
-        <Layout title="Gandom" footer selected="home">
+        <Layout title="Gandom">
             <div className="bg-red p-5">
                 <Link href="/">
                     <span className="w-1/12 h-10 p-3 m-2 bg-gold  rounded">go to home</span>
                 </Link>
                 <span className="w-1/12 h-10 p-3 mt-2 bg-gold text-blue rounded">
-                   basket screen: {t("zabanEn")}
+                    basket screen: {t("zabanEn")}
                 </span>
             </div>
         </Layout>

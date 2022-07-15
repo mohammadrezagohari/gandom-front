@@ -7,7 +7,7 @@ const Cart = () => {
     const { t } = useTranslation('translation');
     const router = useRouter()
     return (
-        <Layout footer title="card" selected="cart">
+        <Layout >
             <div >this is Cart page</div>;
             <span className='text-lg text-blue-600 bg-gold'>home screen: {t("test")}</span>
         </Layout>
