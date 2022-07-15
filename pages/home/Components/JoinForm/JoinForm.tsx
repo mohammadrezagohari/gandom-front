@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 
 import JoinTeamDark from "@assets/svg/JoinTeamDark.svg";
 import JoinTeamLight from "@assets/svg/JoinTeamLight.svg";
-import { InputCustom } from "@components/ui";
+// import { InputCustom } from "@components/ui";
 import { Schema, JoinFormValuesInitial, JoinFormType } from './Schema';
 
 //type attribute html tag
@@ -67,7 +67,7 @@ const JoinForm: FC<FormProps> = ({ children, title, mode, styleCustom, ...otherP
                                 onSubmit={handleSubmit}>
                                 <section >
 
-                                    <InputCustom
+                                    {/* <InputCustom
                                         label='نام'
                                         placeholder='نام را وارد کنید'
                                         name='name'
@@ -88,7 +88,7 @@ const JoinForm: FC<FormProps> = ({ children, title, mode, styleCustom, ...otherP
                                         touched={touched.lastname}
                                         onBlur={handleBlur}
                                         value={values.lastname}
-                                    />
+                                    /> */}
                                     {/* <InputCustom
                                         label='نام پدر'
                                         placeholder='نام پدر را وارد کنید'

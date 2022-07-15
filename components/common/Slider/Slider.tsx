@@ -1,11 +1,11 @@
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import cn from "classnames";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import { Card } from "@components/ui";
@@ -19,22 +19,186 @@ import Link from "next/link";
 import PersonalCard from "@components/ui/PersonalCard";
 import { useTranslation } from "next-i18next";
 
+
+import { useKeenSlider } from "keen-slider/react"
+import 'keen-slider/keen-slider.min.css'
+import KeenSlider from 'keen-slider'
+
+
+
 export interface SliderProps {
     list: CardProps[],
-    cardMode?: string
+    cardMode: "personal" | "general",
+}
+
+const CardType = {
+    personal: PersonalCard,
+    general: Card,
 }
 
 const Slider: FC<SliderProps> = ({ list, cardMode }) => {
+
+
+    const [ref] = useKeenSlider<HTMLDivElement>({
+        breakpoints: {
+            // '(max-width: 1420px)': {
+            //     loop: false,
+            //     slides: {
+            //         perView: 3,
+            //         spacing: 10,
+            //     },
+            // },
+            // '(max-width: 1360px)': {
+            //     loop: false,
+            //     slides: {
+            //         perView: 3,
+            //         spacing: 10,
+            //     },
+            '(min-width:320px)': {
+                slides: {
+                    perView: 1,
+                    spacing: 10,
+                },
+            },
+            '(min-width: 500px)': {
+                slides: {
+                    perView: 2,
+                    spacing: 30,
+                },
+            },
+            '(min-width: 992px)': {
+                slides: {
+                    perView: 3,
+                    spacing:60,
+                },
+            }
+
+        },
+        slides: {
+            perView: 60,
+            spacing:10,
+        },
+        initial: 0,
+        slideChanged(slider) {
+            setCurrentSlide(slider.track.details.rel)
+        },
+        created() {
+            setLoaded(true)
+        },
+    })
+
+    const [currentSlide, setCurrentSlide] = React.useState(0)
+    const [loaded, setLoaded] = useState(false)
+    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+        initial: 0,
+        slideChanged(slider) {
+            setCurrentSlide(slider.track.details.rel)
+        },
+        created() {
+            setLoaded(true)
+        },
+    })
+    function Arrow(props: {
+        disabled: boolean
+        left?: boolean
+        onClick: (e: any) => void
+    }) {
+        const disabeld = props.disabled ? " arrow--disabled" : ""
+        return (
+            <svg
+                fill="#fff"
+                onClick={props.onClick}
+                className={`arrow w-[5rem] h-[5rem] ${props.left ? "arrow--left" : "arrow--right"
+                    } ${disabeld}`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            >
+                {props.left && (
+                    <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+                )}
+                {!props.left && (
+                    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+                )}
+            </svg>
+        )
+    }
+
+
+
+
+
+
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
+    const [visible, setVisible] = useState<boolean>(false);
+
+    const CardComponent = CardType[cardMode];
+
+    useEffect(() => {
+        setIsSidebarOpen(visible)
+    }, [visible])
+
+    useEffect(() => {
+        // Disable the scroll body when opening the drawer
+        visible ? document.body.classList.add('hidescroll') : document.body.classList.remove('hidescroll');
+    }, [isSidebarOpen]);
 
     //customiz next and prev button
     const navigationPrevRef = React.useRef(null)
     const navigationNextRef = React.useRef(null)
 
     const { theme, setTheme } = useTheme();
-    const { t } = useTranslation()
+    const { t } = useTranslation();
+
     return (
-        <div className=" w-full flex flex-col justify-center items-center ">
-            <div className="w-full flex justify-center items-center">
+        <div className=" w-full flex flex-col justify-center items-center relative">
+
+            <>
+                <div className="navigation-wrapper w-full">
+                    <div ref={ref} className="keen-slider">
+                        {list?.map((item: CardProps, index: number) => {
+                            return (
+                                <div key={index} className="keen-slider__slide">
+                                    <CardComponent
+                                        url={item.url}
+                                        alt={item.alt}
+                                        caption={item.caption}
+                                        hrefCard={item.hrefCard}
+                                    />
+
+                                </div>
+                            )
+                        })}
+                        {loaded && instanceRef.current && (
+                            <div className="w-full flex">
+                                <Arrow
+                                    left
+                                    onClick={(e: any) =>
+                                        e.stopPropagation() || instanceRef.current?.prev()
+                                    }
+                                    disabled={currentSlide === 0}
+                                />
+
+                                <Arrow
+                                    onClick={(e: any) =>
+                                        e.stopPropagation() || instanceRef.current?.next()
+                                    }
+                                    disabled={
+                                        currentSlide ===
+                                        instanceRef.current.track.details.slides.length - 1
+                                    }
+                                />
+                            </div>
+                        )}
+                    </div>
+
+                </div>
+            </>
+
+
+
+
+            {/* <div className="w-full flex justify-center items-center">
                 <Swiper
                     breakpoints={{
                         // when window width is >= 640px
@@ -52,6 +216,7 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                             width: 992,
                             slidesPerView: 2
                         },
+
                     }}
                     spaceBetween={60}
                     slidesPerGroup={3}
@@ -70,45 +235,18 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                             <SwiperSlide
                                 key={index}
                             >
-                                <div className="w-12/12  flex flex justify-center items-center">
-                                    {cardMode == "personal" ?
-                                        <PersonalCard
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        /> :
-                                        <Card
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        />
-                                    }
+                                <div className="w-12/12 flex flex justify-center items-center">
+                                    <CardComponent
+                                        url={item.url}
+                                        alt={item.alt}
+                                        caption={item.caption}
+                                        hrefCard={item.hrefCard}
+                                    />
+                                 
                                 </div>
                             </SwiperSlide>
                         )
-                    })}
-                    {list?.map((item: CardProps, index: number) => {
-                        return (
-                            <SwiperSlide
-                                key={index}
-                            >
-                                <div className="w-12/12  flex flex justify-center items-center">
-                                    {cardMode == "personal" ?
-                                        <PersonalCard
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        /> :
-                                        <Card
-                                            url={item.url}
-                                            alt={item.alt}
-                                            caption={item.caption}
-                                        />
-                                    }
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })}
+                 })}
                 </Swiper>
             </div>
             <div className="w-full flex flex-row justify-between items-center mt-10 pt-5">
@@ -126,7 +264,9 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                 </div>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold mx-10" />
                 <Link href="/"><h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold text-xl dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] flex jusify-center items-center font-Poppins rtl:font-Yekanbakh">{t("seeAll")}</h6></Link>
-            </div>
+            </div> */}
+
+
         </div>
     );
 }

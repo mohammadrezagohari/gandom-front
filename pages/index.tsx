@@ -1,12 +1,18 @@
 import { Layout } from '@components/common';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 interface HomeProps {
     locale?: any
 }
 
 const Home: FC<HomeProps> = (props) => {
+    
+    // useEffect(() => {
+    //     window.location.href = "/home";
+
+    // }, [])
+    
     return (
         <Layout title="Gandom" >
         </Layout>
