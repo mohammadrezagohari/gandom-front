@@ -4,12 +4,12 @@ import { useTranslation } from 'next-i18next';
 import cn from "classnames";
 
 import styles from "./Home.module.scss"
-import { Layout, SliderColumn } from '@components/common';
+import { Layout } from '@components/common';
 import HomeLogo from "@assets/svg/home.svg";
-import { Button } from '@components/ui';
-import { FollowUs, HomeSlider, JoinForm, Tab } from "./Components"
+import { Button, JoinForm } from '@components/ui';
 import Counter from '@components/ui/Counter';
-import { TeamData } from './data';
+import { FollowUs, HomeSlider, Tab } from '@components/pages-components/home/Components';
+import { TeamData } from '@components/pages-components/data';
 
 interface HomeProps {
     locale?: any
@@ -66,7 +66,7 @@ const Home: FC<HomeProps> = (props) => {
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-32">
                     <JoinForm />
-                </section> 
+                </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-24">
                     <HomeSlider title="ourWorks" list={TeamData} cardMode='general' />
                 </section>
@@ -77,6 +77,7 @@ const Home: FC<HomeProps> = (props) => {
         </Layout>
     )
 };
+
 export async function getStaticProps({ locale }: { locale: any }) {
     return {
         props: {
@@ -85,6 +86,5 @@ export async function getStaticProps({ locale }: { locale: any }) {
         },
     };
 }
-
 
 export default Home;

@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { t } from 'i18next';
 import Image from 'next/image';
-import { Layout, SliderColumn } from '@components/common';
+import { Layout } from '@components/common';
 
 import React, { DetailedHTMLProps, FC, ReactNode } from 'react';
 import { useTranslation } from 'next-i18next';
