@@ -1,4 +1,3 @@
-# elegant-ui
 
 ## Requirements
 
