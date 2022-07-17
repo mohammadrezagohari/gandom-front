@@ -3,8 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 import { Layout, SliderColumn } from '@components/common';
-import { WorksSlider } from '@pages/ourWorks/Components';
-import { TeamData } from '@pages/home/data';
+import { WorksSlider } from '@components/pages-components/ourWorks/Components';
+import { TeamData } from '@components/pages-components/data';
 
 interface OurTeamProps {
     locale?: any

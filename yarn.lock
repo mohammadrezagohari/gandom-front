@@ -2087,6 +2087,13 @@
     "@types/scheduler" "*"
     "csstype" "^3.0.2"
 
+"@types/redux-logger@^3.0.9":
+  "integrity" "sha512-cwYhVbYNgH01aepeMwhd0ABX6fhVB2rcQ9m80u8Fl50ZODhsZ8RhQArnLTkE7/Zrfq4Sz/taNoF7DQy9pCZSKg=="
+  "resolved" "https://registry.npmjs.org/@types/redux-logger/-/redux-logger-3.0.9.tgz"
+  "version" "3.0.9"
+  dependencies:
+    "redux" "^4.0.0"
+
 "@types/redux@^3.6.0":
   "integrity" "sha512-ic+60DXHW5seNyqFvfr7Sk5cnXs+HsF9tIeIaxjOuSP5kzgDXC+AzKTYmjAfuLx4Sccm/0vjwBQj3OOkUkwOqg=="
   "resolved" "https://registry.npmjs.org/@types/redux/-/redux-3.6.0.tgz"
@@ -6920,10 +6927,42 @@
     "ms" "^2.1.1"
     "semver" "^5.6.0"
 
+"jsx-ast-utils@^2.4.1 || ^3.0.0", "jsx-ast-utils@^3.2.1":
   "integrity" "sha512-XzO9luP6L0xkxwhIJMTJQpZo/eeN60K08jHdexfD569AGxeNug6UketeHXEhROoM8aR7EcUoOQmIhcJQjcuq8Q=="
   "resolved" "https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.0.tgz"
   "version" "3.3.0"
   dependencies:
+    "array-includes" "^3.1.4"
+    "object.assign" "^4.1.2"
+
+"jwa@^1.4.1":
+  "integrity" "sha512-qiLX/xhEEFKUAJ6FiBMbes3w9ATzyk5W7Hvzpa/SLYdxNtng+gcurvrI7TbACjIXlsJyr05/S1oUhZrc63evQA=="
+  "resolved" "https://registry.npmjs.org/jwa/-/jwa-1.4.1.tgz"
+  "version" "1.4.1"
+  dependencies:
+    "buffer-equal-constant-time" "1.0.1"
+    "ecdsa-sig-formatter" "1.0.11"
+    "safe-buffer" "^5.0.1"
+
+"jws@^3.2.1":
+  "integrity" "sha512-YHlZCB6lMTllWDtSPHz/ZXTsi8S00usEV6v1tjq8tOUZzw7DpSDWVXjXDre6ed1w/pd495ODpHZYSdkRTsa0HA=="
+  "resolved" "https://registry.npmjs.org/jws/-/jws-3.2.2.tgz"
+  "version" "3.2.2"
+  dependencies:
+    "jwa" "^1.4.1"
+    "safe-buffer" "^5.0.1"
+
+"keen-slider@^6.7.0":
+  "integrity" "sha512-tsxUE2PXCRQZcZsLmFY5S4UK0yStQd9Dw/qnH57RyXDTUr3XMDhoAOkPbOQT68lGNSpghBcEftPfcgggYoHFTA=="
+  "resolved" "https://registry.npmjs.org/keen-slider/-/keen-slider-6.7.0.tgz"
+  "version" "6.7.0"
+
+"kind-of@^6.0.2":
+  "integrity" "sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
+  "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
+  "version" "6.0.3"
+
+"kleur@^3.0.3":
   "integrity" "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="
   "resolved" "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
   "version" "3.0.3"
@@ -8965,7 +9004,7 @@
     "broadcast-channel" "^3.4.1"
     "match-sorter" "^6.0.2"
 
-"react-redux@*", "react-redux@^7.2.1 || ^8.0.0-beta", "react-redux@^7.2.2":
+"react-redux@*", "react-redux@^7.2.1 || ^8.0.0-beta", "react-redux@^7.2.8":
   "integrity" "sha512-6+uDjhs3PSIclqoCk0kd6iX74gzrGc3W5zcAjbrFgEdIjRSQObdIwfx80unTkVUYvbQ95Y8Av3OvFHq1w5EOUw=="
   "resolved" "https://registry.npmjs.org/react-redux/-/react-redux-7.2.8.tgz"
   "version" "7.2.8"
@@ -9129,7 +9168,7 @@
   dependencies:
     "minimatch" "3.0.4"
 
-"redux-devtools-extension@^2.13.8":
+"redux-devtools-extension@^2.13.9":
   "integrity" "sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A=="
   "resolved" "https://registry.npmjs.org/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz"
   "version" "2.13.9"

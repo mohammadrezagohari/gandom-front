@@ -46,6 +46,8 @@ const Counter = (start: any) => {
     }
 
     //render counter number with animation
+
+
     const counters = document.querySelectorAll('.value');
     const speed = 200;
     counters.forEach((counter: any) => {

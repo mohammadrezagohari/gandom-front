@@ -1,8 +1,10 @@
 import React, { FC, useEffect } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { Layout } from '@components/common';
-import { TeamData } from './data';
-import { WorksSlider } from './Components';
+
+import { TeamData } from '@components/pages-components/data';
+import { WorksSlider } from '@components/pages-components/ourWorks/Components';
 
 interface OurWorksProps {
     locale?: any

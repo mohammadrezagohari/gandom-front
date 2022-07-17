@@ -5,7 +5,7 @@ export { default as Modal } from './Modal';
 export { default as DropDown } from './Dropdown';
 export { default as Counter } from './Counter';
 export { default as Card } from './Card/Card';
-export { default as JoinForm } from '../../pages/home/Components/JoinForm';
+export { default as JoinForm } from '../pages-components/home/Components/JoinForm';
 export { default as ErrorMessage } from './ErrorMessage';
 // export { default as InputCustom } from './InputCustom';
 export { default as ImageDetail } from './ImageDetail';
