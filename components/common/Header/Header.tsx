@@ -29,6 +29,7 @@ const Header: FC<HeaderProps> = () => {
         open: false,
         value: ""
     });
+    
     const [show, setShow] = useState<boolean>(false);
 
     //detect a click outside dropdown
@@ -38,6 +39,7 @@ const Header: FC<HeaderProps> = () => {
             open: false
         }))
     }
+
     useEffect(() => {
         const handleClickOutside = (event: any) => {
             ref.current && !ref.current.contains(event.target) && onClickOutside && onClickOutside();
