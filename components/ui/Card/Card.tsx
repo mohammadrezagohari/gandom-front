@@ -16,14 +16,14 @@ const Card: FC<CardProps> = ({ url, alt, caption, hrefCard }) => {
     const router = useRouter();
     const dispatch = useDispatch();
 
-    const handleClick = (e: any) => {
+    const handleClick = () => {
         router.push(hrefCard)
     }
 
     return (
         <div className='relative'>
             <div className='border w-12/12 h-full hover:bg-dark dark:hover:bg-gold dark:border-gold text-dark hover:text-white dark:text-gold hover:dark:text-dark border-dark py-8 px-5 flex justify-center items-center transition-colors duration-300 ease-in-out'>
-                <div onClick={(e) => handleClick(e)}>
+                <div onClick={() => handleClick()}>
                     <div className='flex flex-col justify-start w-full h-full self-center'>
                         <Image
                             src={url}

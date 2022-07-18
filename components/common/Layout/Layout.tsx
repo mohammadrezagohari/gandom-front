@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { FC, ReactNode, useState, useEffect } from 'react';
+import React, { FC, ReactNode, useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router'
@@ -15,28 +15,24 @@ export interface LayoutProps {
     title?: string;
 }
 
-const Layout: FC<LayoutProps> = ({
-    children,
-    title,
-}) => {
-
-    const router = useRouter()
-
-    //translate screens Hook
-    const { t } = useTranslation('translation');
-
-    // darkMode Config
-    const { theme, setTheme } = useTheme();
+const Layout: FC<LayoutProps> = ({ children, title, }) => {
+    const router = useRouter();
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
 
     // When mounted on client, now we can show the UI
     const [mounted, setMounted] = useState(false);
     useEffect(() => setMounted(true), [setMounted]);   // at init onlyif (!mounted) return null;
 
-    // check and change theme
-    const changeThame = () => setTheme(theme === "dark" ? "light" : "dark")
-
     const hidden = useSelector((state: any) => state.popup.hidden);
-    console.log("hidden?:", hidden);
+
+    useEffect(() => {
+        setIsSidebarOpen(hidden)
+    }, [hidden])
+
+    useEffect(() => {
+        // Disable the scroll body when opening the drawer
+        !hidden ? document.body.classList.add('hidescroll') : document.body.classList.remove('hidescroll');
+    }, [isSidebarOpen]);
 
     return (
         mounted ?

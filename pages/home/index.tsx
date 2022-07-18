@@ -68,7 +68,7 @@ const Home: FC<HomeProps> = (props) => {
                     <JoinForm />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-24">
-                    <HomeSlider title="ourWorks" list={TeamData} cardMode='general' />
+                    <HomeSlider title="ourTeam" list={TeamData} cardMode='personal' />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-32">
                     <FollowUs />

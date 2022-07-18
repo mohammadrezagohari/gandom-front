@@ -73,11 +73,11 @@ const Footer = () => {
                     </div>
                     <div className='flex ltr:space-x-4 mx-7 justify-center items-center '>
                         <InstagramGold width="3rem" height="3rem" />
-                        <h6 className='ltr:pt-1 rtl:pt-2 dark:text-gray-light rtl:mx-5 text-dark rtl:font-Yekanbakh font-Poppins font-medium text-base md:text-2xl'>0911 411 9225</h6>
+                        <h6 dir="ltr" className='ltr:pt-1 rtl:pt-2 dark:text-gray-light rtl:mx-5 text-dark rtl:font-Yekanbakh font-Poppins font-medium text-base md:text-2xl'>0911 411 9225</h6>
                     </div>
                     <div className='flex ltr:space-x-4 mx-7 justify-center items-center '>
                         <InstagramGold width="3rem" height="3rem" />
-                        <h6 className='ltr:pt-1 rtl:pt-2 dark:text-gray-light rtl:mx-5 text-dark rtl:font-Yekanbakh font-Poppins font-medium text-base md:text-2xl'>0911 411 9225</h6>
+                        <h6 dir="ltr" className='ltr:pt-1 rtl:pt-2 dark:text-gray-light rtl:mx-5 text-dark rtl:font-Yekanbakh font-Poppins font-medium text-base md:text-2xl'>0911 411 9225</h6>
                     </div>
                 </div>
             </div>
