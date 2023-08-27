@@ -10,7 +10,6 @@ declare module 'react' {
 
 const Counter = (start: any) => {
     const { t } = useTranslation('translation');
-
     const ListCount = [
         {
             count: "23",
@@ -32,17 +31,27 @@ const Counter = (start: any) => {
 
     //render map item
     const renderItem = (item: itemType, index: number) => {
-        return (
-            <>
-                <div key={index} className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
-                    <span className="value text-5xl md:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} key={index}>0</span>
-                    <span className='text-xl md:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
-                </div>
-                {index == 0 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
-                {index == 1 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
-            </>
 
+
+        return (
+            <div key={index} className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
+                <span className="value text-5xl md:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} >0</span>
+                <span className='text-xl md:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
+            </div>
         )
+
+
+        // return (
+        //     <>
+        //         <div key={index} className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
+        //             <span className="value text-5xl md:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} key={index}>0</span>
+        //             <span className='text-xl md:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
+        //         </div>
+        //         {index == 0 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
+        //         {index == 1 ? <span className='h-[10rem] md:h-[14rem] mx-8 md:mx-0 w-[3px] bg-dark dark:bg-gold'></span> : null}
+        //     </>
+
+        // )
     }
 
     //render counter number with animation

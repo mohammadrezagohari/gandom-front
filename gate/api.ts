@@ -52,12 +52,17 @@ const call = async <T>(method: Method, url: string, data: any = {}): Promise<T> 
         return Promise.resolve(response.data);
     } catch (error) {
         let err = null;
+        // @ts-ignore
         if (error.response) {
+            // @ts-ignore
             err = error.response;
-        } else if (error.request) {
-            err = { message: error.request._response };
-        } else {
-            err = error;
+        } else { // @ts-ignore
+            if (error.request) {
+                        // @ts-ignore
+                err = { message: error.request._response };
+                    } else {
+                        err = error;
+                    }
         }
         return Promise.reject(err);
     }
@@ -83,6 +88,7 @@ const file = async (
 
         return Promise.resolve(response.data);
     } catch (error) {
+        // @ts-ignore
         return Promise.reject(error.response);
     }
 };

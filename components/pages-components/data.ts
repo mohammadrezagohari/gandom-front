@@ -1,60 +1,29 @@
-
 //sliderColumn data seo
 export const SliderDataSeo = [
     {
-        url: "/demo.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/samples/1/1-1.jpg",
+        alt: "Online Clothes Shop",
+        caption: "Online Clothes Shop",
         hrefCard: "/ourWorks/ProductDetail",
         id: 1
     }, {
-        url: "/demoBlue.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website",
         hrefCard: "/ourWorks/ProductDetail",
         id: 2
     }, {
-        url: "/demo.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/demoBlue.png",
+        alt: "Academy Hekmat Website",
+        caption: "Academy Hekmat",
         hrefCard: "/ourWorks/ProductDetail",
         id: 3
     }, {
-        url: "/demoBlue.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website",
         hrefCard: "/ourWorks/ProductDetail",
         id: 4
-    }, {
-        url: "/demo.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "/ourWorks/ProductDetail",
-        id: 5
-    }, {
-        url: "/demoBlue.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "/ourWorks/ProductDetail",
-        id: 6
-    }, {
-        url: "/demo.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "/ourWorks/ProductDetail",
-        id: 7
-    }, {
-        url: "/demoBlue.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "/ourWorks/ProductDetail",
-        id: 8
-    }, {
-        url: "/demo.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "/ourWorks/ProductDetail",
-        id: 9
     },
 ]
 
@@ -120,59 +89,93 @@ export const SliderDataApp = [
 //slider data Team
 export const TeamData = [
     {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/bio/mohammadreza-gohari.jpg",
+        alt: "Mohammadreza Gohari",
+        caption: "Mohammadreza Gohari",
+        jobPosition: "Co-Founder | Full-Stack Developer",
         hrefCard: "./ourWorks/ProductDetail",
         id: 1
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/bio/ali-asadpour.jpg",
+        jobPosition: "Co-Founder | UI Designer",
+        alt: "Ali Asadpour",
+        caption: "Ali Asadpour",
         hrefCard: "./ourWorks/ProductDetail",
         id: 2
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/bio/kasra-yaseri.jpg",
+        alt: "Kasra Yaseri",
+        caption: "Kasra Yaseri",
+        jobPosition: "Mobile Developer",
         hrefCard: "./ourWorks/ProductDetail",
         id: 3
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/bio/aysan-mojtahedi.jpg",
+        alt: "Aysan Mojtahedi",
+        caption: "Aysan Mojtahedi",
+        jobPosition: "Scrum Master",
         hrefCard: "./ourWorks/ProductDetail",
         id: 4
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
+        url: "/bio/parsa-panahpoor.jpg",
+        alt: "Parsa Pasahpoor",
+        caption: "Parsa Pasahpoor",
+        jobPosition: "Backend Developer",
         hrefCard: "./ourWorks/ProductDetail",
         id: 5
+    }
+    // , {
+    //     url: "/profile.png",
+    //     alt: "Pezeshk Amoz yalda landing",
+    //     caption: "Pezeshk Amoz yalda landing",
+    //     hrefCard: "./ourWorks/ProductDetail",
+    //     id: 6
+    // }, {
+    //     url: "/profile.png",
+    //     alt: "Pezeshk Amoz yalda landing",
+    //     caption: "Pezeshk Amoz yalda landing",
+    //     hrefCard: "./ourWorks/ProductDetail",
+    //     id: 7
+    // }, {
+    //     url: "/profile.png",
+    //     alt: "Pezeshk Amoz yalda landing",
+    //     caption: "Pezeshk Amoz yalda landing",
+    //     hrefCard: "./ourWorks/ProductDetail",
+    //     id: 8
+    // }, {
+    //     url: "/profile.png",
+    //     alt: "Pezeshk Amoz yalda landing",
+    //     caption: "Pezeshk Amoz yalda landing",
+    //     hrefCard: "./ourWorks/ProductDetail",
+    //     id: 9
+    // },
+]
+
+export const OurWorksData = [
+    {
+        url: "/samples/1/1-1.jpg",
+        alt: "Online Clothes Shop",
+        caption: "Online Clothes Shop",
+        hrefCard: "/ourWorks/ProductDetail",
+        id: 1
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "./ourWorks/ProductDetail",
-        id: 6
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website",
+        hrefCard: "/ourWorks/ProductDetail",
+        id: 2
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "./ourWorks/ProductDetail",
-        id: 7
+        url: "/demoBlue.png",
+        alt: "Academy Hekmat Website",
+        caption: "Academy Hekmat",
+        hrefCard: "/ourWorks/ProductDetail",
+        id: 3
     }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "./ourWorks/ProductDetail",
-        id: 8
-    }, {
-        url: "/profile.png",
-        alt: "Pezeshk Amoz yalda landing",
-        caption: "Pezeshk Amoz yalda landing",
-        hrefCard: "./ourWorks/ProductDetail",
-        id: 9
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website",
+        hrefCard: "/ourWorks/ProductDetail",
+        id: 4
     },
 ]
 

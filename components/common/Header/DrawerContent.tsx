@@ -7,9 +7,7 @@ import IconArrowleftDark from "@assets/svg/blcak/arrowleft.svg";
 import IconArrowleftGold from "@assets/svg/gold/arrowleft.svg";
 import IconArrowRightGold from "@assets/svg/gold/arrowright.svg";
 import IconArrowRightDark from "@assets/svg/blcak/arrowright.svg";
-
 import { useTheme } from 'next-themes';
-
 interface DrawerProp {
     visible: boolean,
     setVisible: any
@@ -54,7 +52,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
     useEffect(() => {
         // Disable the scroll body when opening the drawer
         visible ? document.body.classList.add('hidescroll') : document.body.classList.remove('hidescroll');
-    }, [isSidebarOpen]);
+    }, [isSidebarOpen,visible]);
 
     const drawerList = [
         {

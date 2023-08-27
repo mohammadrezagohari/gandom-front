@@ -10,6 +10,7 @@ export interface CardProps {
     alt: string,
     caption: string,
     hrefCard: string,
+    jobPosition?: string
 }
 
 const Card: FC<CardProps> = ({ url, alt, caption, hrefCard }) => {

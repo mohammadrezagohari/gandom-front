@@ -81,7 +81,7 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                         },
                     }}
                     spaceBetween={30}
-                    slidesPerGroup={3}
+                    slidesPerGroup={4}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     pagination={false}
@@ -103,6 +103,7 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                                         alt={item.alt}
                                         caption={item.caption}
                                         hrefCard={item.hrefCard}
+                                        jobPosition={item.jobPosition}
                                     />
 
                                 </div>

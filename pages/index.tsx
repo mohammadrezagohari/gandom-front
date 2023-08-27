@@ -10,10 +10,9 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = (props) => {
     const router = useRouter();
-
     useEffect(() => {
         router.replace("/home")
-    }, [])
+    }, [router])
 
     return <>  </>
 }

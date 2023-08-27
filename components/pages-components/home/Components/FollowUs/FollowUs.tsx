@@ -45,7 +45,7 @@ const FollowUs = () => {
     //items render
     const renderItem = (item: any, index: number) => {
         return (
-            <Link href={"/"}>
+            <Link href={"/"} key={index}>
                 <div
                     className={cn("transition-colors duration-300 ease-in-out w-96 my-4 border dark:border-gold border-dark dark:hover:fill-dark dark:fill-gold hover:fill-white dark:hover:text-dark hover:text-white text-dark dark:text-gold fill-dark hover:bg-dark dark:hover:bg-gold flex justify-start items-center px-2 py-4")}
                     key={index}>

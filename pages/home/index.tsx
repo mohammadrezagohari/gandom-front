@@ -6,10 +6,12 @@ import cn from "classnames";
 import styles from "./Home.module.scss"
 import { Layout } from '@components/common';
 import HomeLogo from "@assets/svg/home.svg";
+import Logo from "@assets/images/structure/logo.png";
 import { Button, JoinForm } from '@components/ui';
 import Counter from '@components/ui/Counter';
 import { FollowUs, HomeSlider, Tab } from '@components/pages-components/home/Components';
 import { TeamData } from '@components/pages-components/data';
+import Image from 'next/image';
 
 interface HomeProps {
     locale?: any
@@ -54,8 +56,9 @@ const Home: FC<HomeProps> = (props) => {
                         </div>
                     </div>
                     <div className='sm:w-10/12 md:w-5/12 xl:w-7/12 flex flex-col items-center justify-center'>
-                        <HomeLogo className='w-full xl:h-[30rem] flex self-center z-[50]' />
-                        <div className={cn("w-24 h-24 absolute bg-gold rounded-full", { [styles.shadow]: true })} ></div>
+                        <Image src={Logo} alt='گروه مهندسین گسترش افزار گندم' className='w-full xl:h-[30rem] flex self-center z-[50]' />
+                        {/* <HomeLogo className='w-full xl:h-[30rem] flex self-center z-[50]' /> */}
+                        {/* <div className={cn("w-24 h-24 absolute bg-gold rounded-full", { [styles.shadow]: true })} ></div> */}
                     </div>
                 </section>
                 <section className='w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-15'>

@@ -7,10 +7,10 @@ interface WorksSliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
     title: string,
-    sliderMode?: "single" | "double" 
+    sliderMode?: "single" | "double"
 }
 
-const WorksSlider: FC<WorksSliderProps> = ({ list, cardMode, title, sliderMode= "single"}) => {
+const WorksSlider: FC<WorksSliderProps> = ({ list, cardMode, title, sliderMode = "single" }) => {
     const { t } = useTranslation('translation');
     return (
         <div className="w-full flex-col">

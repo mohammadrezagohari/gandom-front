@@ -1,19 +1,11 @@
-import cn from 'classnames';
-import { t } from 'i18next';
-import Image from 'next/image';
-import { Layout, SliderColumn } from '@components/common';
+import React, {useState} from 'react';
+import {useTranslation} from "next-i18next";
+import {Layout} from "@components/common";
+import Image from "next/image";
 
-import React, { DetailedHTMLProps, FC, ReactNode, useState } from 'react';
-import { useTranslation } from 'next-i18next';
-export interface ProductDetailProps
-    extends DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    children?: ReactNode;
-    title?: string;
-    mode?: "contained" | "outlined";
-    styleCustom?: string
-}
-const ProductDetail: FC<ProductDetailProps> = ({ children, title, mode, styleCustom, ...otherProps }) => {
 
+
+const ProductDetails: React.FC = () => {
     const [activeImage, setActiveImage] = useState<number>(0);
 
     const { t } = useTranslation('translation');
@@ -51,7 +43,6 @@ const ProductDetail: FC<ProductDetailProps> = ({ children, title, mode, styleCus
                             width="600px"
                             height="120px"
                             className={"object-cover border-dark border dark:border-gold"}
-
                         />
                         <div className='flex justify-center space-x-2 md:space-x-7 mt-7'>
                             {ImageList.map((item: any, index: any) => {
@@ -79,6 +70,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ children, title, mode, styleCus
             </div>
         </Layout>
     )
+
 };
 
-export default ProductDetail;
+export default ProductDetails;

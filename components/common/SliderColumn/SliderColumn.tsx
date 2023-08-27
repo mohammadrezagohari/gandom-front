@@ -39,6 +39,7 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
     const { t } = useTranslation()
     return (
         <div className=" w-full flex flex-col justify-center items-center ">
+            {console.log('our list', list)}
             <div className="w-full flex justify-center items-center">
                 <Swiper
                     breakpoints={{

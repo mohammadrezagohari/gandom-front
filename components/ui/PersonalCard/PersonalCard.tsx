@@ -12,9 +12,10 @@ export interface PersonalCardProps {
     alt: string,
     caption: string,
     hrefCard: string,
+    jobPosition?: string,
 }
 
-const PersonalCard: FC<PersonalCardProps> = ({ url, alt, caption, hrefCard }) => {
+const PersonalCard: FC<PersonalCardProps> = ({ url, alt, caption, hrefCard, jobPosition = null }) => {
     const { theme, setTheme } = useTheme();
     const { pathname } = useRouter();
 
@@ -37,7 +38,7 @@ const PersonalCard: FC<PersonalCardProps> = ({ url, alt, caption, hrefCard }) =>
                     />
                     <div className='ltr:border-l-1 rtl:border-r-1 dark-border-gold border-gray-dark w-full flex flex-col mt-5 px-4 space-y-2'>
                         <span className={cn('font-Poppins text-dark hover:text-gold dark:hover:text-dark dark:text-gold rtl:font-Yekanbakh text-lg font-bold', theme == "dark" ? styles.spanDark : styles.spanLight)}>{caption}</span>
-                        <p className={cn('font-Poppins rtl:font-Yekanbakh text-gray-dark dark:text-white text-lg font-light', theme == "dark" ? styles.disDark : styles.disLight)}>UI/UX Designer and Graphic Designer</p>
+                        <p className={cn('font-Poppins rtl:font-Yekanbakh text-gray-dark dark:text-white text-lg font-light', theme == "dark" ? styles.disDark : styles.disLight)}>{jobPosition}</p>
                     </div>
                 </div>
             </div>
