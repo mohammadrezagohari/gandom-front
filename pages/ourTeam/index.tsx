@@ -6,19 +6,19 @@ import { Layout, SliderColumn } from '@components/common';
 import { WorksSlider } from '@components/pages-components/ourWorks/Components';
 import { TeamData } from '@components/pages-components/data';
 
-interface OurTeamProps {
+interface ourTeamProps {
     locale?: any
 }
 
-const OurTeam: FC<OurTeamProps> = (props) => {
+const ourTeam: FC<ourTeamProps> = (props) => {
 
     const { t } = useTranslation('translation');
 
     return (
         <Layout title="Gandom" >
-            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
+            <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
-                    <WorksSlider list={TeamData} sliderMode='double' title='OurTeam' cardMode='general' />
+                    <WorksSlider list={TeamData} sliderMode='double' title='ourTeam' cardMode='general' />
                 </section>
             </div>
         </Layout>
@@ -34,4 +34,4 @@ export async function getStaticProps({ locale }: { locale: any }) {
 }
 
 
-export default OurTeam;
+export default ourTeam;

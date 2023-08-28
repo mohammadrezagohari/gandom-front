@@ -22,13 +22,13 @@ import { useTranslation } from "next-i18next";
 export interface SliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
-}
+} 
 
 const CardType = {
     personal: PersonalCard,
     general: Card,
 }
-
+ 
 const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
     const CardComponent = CardType[cardMode];
     //customiz next and prev button
@@ -60,9 +60,9 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                         },
                     }}
                     spaceBetween={30}
-                    slidesPerGroup={3}
+                    // slidesPerGroup={3}
                     loop={true}
-                    loopFillGroupWithBlank={true}
+                    // loopFillGroupWithBlank={true}
                     pagination={false}
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
@@ -81,7 +81,7 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                                         url={item.url}
                                         alt={item.alt}
                                         caption={item.caption}
-                                        hrefCard={item.hrefCard}
+                                        // hrefCard={item.hrefCard}
                                     />
                                 </div>
                                 <div className="w-12/12 mt-12 flex flex-col justify-center items-center">
@@ -89,7 +89,7 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                                         url={item.url}
                                         alt={item.alt}
                                         caption={item.caption}
-                                        hrefCard={item.hrefCard}
+                                        // hrefCard={item.hrefCard}
                                     />
                                 </div>
                             </SwiperSlide>

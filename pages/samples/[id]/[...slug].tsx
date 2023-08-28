@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import {useTranslation} from "next-i18next";
 import {Layout} from "@components/common";
 import Image from "next/image";
+import { useRouter } from 'next/router';
+import { SliderDataSeo } from '@components/pages-components/data';
 
+const PostDetail: React.FC = () => {
 
-
-const ProductDetails: React.FC = () => {
     const [activeImage, setActiveImage] = useState<number>(0);
 
     const { t } = useTranslation('translation');
@@ -26,8 +27,23 @@ const ProductDetails: React.FC = () => {
         },
     ]
 
+
+    const router = useRouter();
+    const { id, slug } = router.query;
+
+    const post = SliderDataSeo.find((post) => post.id === id);
+
+    if (!post) {
+        return <div>Post not found</div>;
+    }
+
     return (
-        <Layout title="Gandom" >
+        <div>
+            {/* <h1>{post.alt}</h1> */}
+
+
+
+            <Layout title="Gandom" >
             <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
                 <div className="w-full flex-col">
                     <div className="w-full flex items-center justify-center">
@@ -64,13 +80,23 @@ const ProductDetails: React.FC = () => {
                         </div>
                     </div>
                     <div className='w-full py-5 mt-5'>
-                        <p className='font-light font-Poppins rtl:font-yekanBakh text-justify md:text-start text-dark dark:text-white text-base md:text-xl w-12/12 md:w-11/12 '> Gandom is a software group consisting of capable and talented young Iranians who are active Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI/UX design.</p>
+                    <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-base sm:text-xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
+                      {post.caption}
+                    </h2>
+                        {/* <h1>{post.alt}</h1> */}
+                        <p className='font-light font-Poppins rtl:font-yekanBakh text-justify md:text-start text-dark dark:text-white text-base md:text-xl w-12/12 md:w-11/12 '>
+                             Gandom is a software group consisting of capable and talented young Iranians who are active Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI/UX design.
+                        </p>
                     </div>
                 </div>
             </div>
         </Layout>
-    )
 
+
+
+
+        </div>
+    );
 };
 
-export default ProductDetails;
+export default PostDetail;

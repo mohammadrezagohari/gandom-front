@@ -65,7 +65,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ children, title, mode, styleCus
                                             width="150px"
                                             height="170px"
                                             onClick={() => setActiveImage(item.id - 1)}
-                                            className={"object-contain border-dark border dark:border-gold"}
+                                            className={"object-cover border-dark border dark:border-gold"}
                                         />
                                     </div>
                                 )

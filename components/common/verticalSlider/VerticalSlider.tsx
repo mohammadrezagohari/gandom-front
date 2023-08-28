@@ -37,7 +37,7 @@ const CardType = {
     general: Card,
 }
 
-const Slider: FC<SliderProps> = ({ list, cardMode }) => {
+const VerticalSlider: FC<SliderProps> = ({ list, cardMode }) => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
     const [visible, setVisible] = useState<boolean>(false);
@@ -61,67 +61,52 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
     const { t } = useTranslation();
 
     return (
-        <div className=" w-full flex flex-col justify-center items-center relative">
-            <div className="w-full flex justify-center items-center">
-                <Swiper
-                    // breakpoints={{
-                    //     // when window width is >= 640px
-                    //     640: {
-                    //         width: 640,
-                    //         slidesPerView: 1,
-                    //     },
-                    //     // when window width is >= 768px
-                    //     768: {
-                    //         width: 768,
-                    //         slidesPerView: 2,
-                    //     },
-                    //     // when window width is >= 992px
-                    //     992: {
-                    //         width: 992,
-                    //         slidesPerView: 2
-                    //     },
-                    //     // 2024: {
-                    //     //     width: 1024,
-                    //     //     slidesPerView: 3
-                    //     // },
-                    // }}
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    // slidesPerGroup={4}
+        <div className=" w-full  ">
+            <div style={{height:"1700px"}} className=" border-2 border-orange-400 flex items-center justify-start">
+            <Swiper  
+                    
+                    slidesPerColumn={1}
+                    slidesPerView={3} 
+                    slidesPerGroup={1}
                     loop={true}
-                    // loopFillGroupWithBlank={true}
-                    pagination={false}
+                    direction={'vertical'}
+                    noSwiping= {false}
+                    // pagination={{
+                    //   clickable: true,
+                    // }}
                     modules={[Pagination, Navigation]}
-                    className="mySwiper gap-5"
+                 
+                    className="mySwiper verticalSwiper"
+                    style={{height:"100%"}}
                     navigation={{
                         prevEl: navigationPrevRef.current,
                         nextEl: navigationNextRef.current,
                     }}
-    
                 >
                     {list?.map((item: CardProps, index: number) => {
                         return (
                             <SwiperSlide
+                            className="w-full px-1"
                                 key={index}
                             >
-                                <Link href={`/samples/${item.id}/${item.alt}`}>
+                                   <Link href={`/samples/${item.id}/${item.alt}`}>
 
-                                <div className="max-w-12/12 flex justify-center items-center">
-                                    <CardComponent
-                                         id={item.id}
-                                        url={item.url}
-                                        alt={item.alt}
-                                        caption={item.caption}
-                                        // hrefCard={item.hrefCard}
-                                        jobPosition={item.jobPosition}
-                                    />
-
-                                </div>
-                                </Link>
+                                        <div className="max-w-12/12 flex justify-center items-center">
+                                            <CardComponent
+                                                 id={item.id}
+                                                url={item.url}
+                                                alt={item.alt}
+                                                caption={item.caption}
+                                                // hrefCard={item.hrefCard}
+                                                jobPosition={item.jobPosition}
+                                            />
+                                        
+                                        </div>
+                                    </Link>
                             </SwiperSlide>
                         )
                     })}
-                </Swiper>
+            </Swiper>
             </div>
             <div className="w-full flex flex-row justify-between items-center mt-10 pt-5">
                 <div className="flex rtl:flex-row-reverse justify-between flex-row  space-x-5">
@@ -137,9 +122,9 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                     </div>
                 </div>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold mx-10" />
-                <Link href="/"><h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold text-xl dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] flex jusify-center items-center font-Poppins rtl:font-Yekanbakh">{t("seeAll")}</h6></Link>
+                <Link href="/"><h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold text-xl dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] jusify-center items-center font-Poppins rtl:font-Yekanbakh">{t("seeAll")}</h6></Link>
             </div>
         </div>
     );
 }
-export default Slider
+export default VerticalSlider

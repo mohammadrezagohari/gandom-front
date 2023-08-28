@@ -43,9 +43,10 @@ class Thumb extends React.Component {
             <Image
                 alt={file.name}
                 src={`${thumb}`}
-                className="img-thumbnail mt-2"
+                className="img-thumbnail mt-2  object-cover"
                 height="200px"
                 width="200px"
+                objectFit={objectFit}
             />);
     }
 }

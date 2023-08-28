@@ -49,7 +49,7 @@
     "**/*.tsx",
     "**/*.js",
     "assets/styles/themes"
-  ],
+, "pages/samples/[id]/[...slug].tsx"  ],
   "exclude": [
     "node_modules"
   ]

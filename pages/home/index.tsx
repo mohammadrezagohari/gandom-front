@@ -34,7 +34,7 @@ const Home: FC<HomeProps> = (props) => {
 
     return (
         <Layout title="Gandom" >
-            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
+            <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <div className='w-full md:w-6/12 xl:w-7/12 flex flex-col items:center justify-center md:items-start md:justify-start mt-0 sm:mt-13 md:mt-0'>
                         <h1 className='font-NotoSerif rtl:font-Yekanbakh mt-10 md:mt-0 font-bold text-5xl text-dark dark:text-gold leading-snug sm:text-center md:text-start xl:text-justify'>{t("title1")}<br />{t("title2")}</h1>
@@ -56,24 +56,24 @@ const Home: FC<HomeProps> = (props) => {
                         </div>
                     </div>
                     <div className='sm:w-10/12 md:w-5/12 xl:w-7/12 flex flex-col items-center justify-center'>
-                        <Image src={Logo} alt='گروه مهندسین گسترش افزار گندم' className='w-full xl:h-[30rem] flex self-center z-[50]' />
+                        <Image src={Logo} alt='گروه مهندسین گسترش افزار گندم' className='w-full xl:h-[30rem] flex self-center z-[50]  object-cover' />
                         {/* <HomeLogo className='w-full xl:h-[30rem] flex self-center z-[50]' /> */}
                         {/* <div className={cn("w-24 h-24 absolute bg-gold rounded-full", { [styles.shadow]: true })} ></div> */}
                     </div>
                 </section>
-                <section className='w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-15'>
+                <section className='w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-15'>
                     <Counter start={scrollPosition} />
                 </section>
-                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-15">
+                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-15">
                     <Tab />
                 </section>
-                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-32">
+                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-32">
                     <JoinForm />
                 </section>
-                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-24">
-                    <HomeSlider title="ourTeam" list={TeamData} cardMode='personal' />
+                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-24">
+                    <HomeSlider title="our-team" list={TeamData} cardMode='personal' />
                 </section>
-                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 px-10 mt-32">
+                <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-32">
                     <FollowUs />
                 </section>
             </div>

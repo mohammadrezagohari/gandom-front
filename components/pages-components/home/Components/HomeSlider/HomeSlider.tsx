@@ -1,14 +1,17 @@
-import React, { FC } from "react";
+import React, { FC,useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { Slider } from "@components/common";
 import Card, { CardProps } from "@components/ui/Card";
 import PersonalCard from "@components/ui/PersonalCard";
+import LazyLoad from "react-lazy-load";
+import Image from "next/image";
+import VerticalSlider from "@components/common/verticalSlider/VerticalSlider";
 
 interface HomeSliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
     title: string
-}
+} 
 const CardType = {
     personal: PersonalCard,
     general: Card,
@@ -16,6 +19,12 @@ const CardType = {
 
 const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {
     const { t } = useTranslation('translation');
+    const [isLoading, setIsLoading] =  useState<boolean>(true)
+// useEffect(() => {
+//         setTimeout(() => {
+//             setIsLoading(false);
+//         }, 5000);
+//     }, []);
     return (
         <div className="w-full flex-col">
             <div className="w-full flex items-center justify-center">
@@ -23,12 +32,47 @@ const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {
                     {t(title)}
                 </h2>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold" />
-            </div>
+            </div> 
             <div className="w-full py-10">
-                <Slider
-                    cardMode={cardMode}
-                    list={list}
-                />
+               
+                {/* <LazyLoad  threshold={0.95} onContentVisible={() => {
+                     setTimeout(() => {
+                        setIsLoading(false);
+                    }, 2000);
+                    console.log("Loading...");
+                    
+                }}>
+                {
+                    isLoading?(
+                        <>
+                        <div className="w-full flex justify-center items-center ">
+                           <img src="./logo.png" alt="" className="loaderAnimation" />
+                        </div>
+                        </>
+                    ):(
+                        <>
+                         <Slider
+                            cardMode={cardMode}
+                             list={list}
+                           />
+                        </>
+                    )
+                }
+                </LazyLoad> */}
+                <div className="hidden md:block lg:block" >
+                    <Slider
+                        cardMode={cardMode}
+                        list={list}
+                    />
+                </div>
+
+                <div className="block md:hidden lg:hidden" >
+                    <VerticalSlider
+                      cardMode={cardMode}
+                      list={list}
+                    />
+                </div>
+
             </div>
         </div>
     );

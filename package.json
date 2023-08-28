@@ -58,6 +58,8 @@
         "react": "18.1.0",
         "react-dom": "18.1.0",
         "react-i18next": "^11.16.9",
+        "react-lazy-load": "^4.0.1",
+        "react-lazy-load-image-component": "^1.6.0",
         "react-query": "^3.39.1",
         "react-redux": "^7.2.8",
         "react-scripts": "^2.1.3",
@@ -79,6 +81,7 @@
         "@types/node": "^14.14.16",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
+        "@types/react-lazy-load-image-component": "^1.5.3",
         "@types/react-redux": "^7.1.14",
         "@typescript-eslint/eslint-plugin": "^6.2.1",
         "@typescript-eslint/parser": "^6.2.1",
@@ -96,5 +99,8 @@
         "tailwindcss": "^3.0.24",
         "typescript": "^4.9.5"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "main": "index.js",
+    "repository": "git@github.com:mohammadrezagohari/gandom-front.git",
+    "author": "HediSg <hedisg11@gmail.com>"
 }

@@ -74,7 +74,7 @@ const Header: FC<HeaderProps> = () => {
             <nav className="backdrop-blur-[3px] z-[200] dark:backdrop-blur-md bg-white/30 pt-4 w-full border-gray-light fixed top-0 xl:px-20 md:px-5 px-2 py-2.5 dark:bg-dark/50 justify-around items-center flex border-zinc-300 border-b">
                 <DrawerContent visible={show} setVisible={setShow} />
                 <div className="relative w-full mx-10 md:mx-7 hidden md:flex flex-wrap justify-between items-center ">
-                    <div dir="ltr" className='flex flex-row rtl:justify-end order-1 w-2/12'>{theme === "dark" ? (<Image src={Logo} width="75" height="75" alt='logo gandom software group' className='w-36 h-16' />) : <Image src={Logo} width="75" height="75" alt='logo gandom software group' className='w-36 h-16' />}</div>
+                    <div dir="ltr" className='flex flex-row rtl:justify-end order-1 w-2/12'>{theme === "dark" ? (<Image src={Logo} width="75" height="75" alt='logo gandom software group'  className='w-36 h-16 object-cover' />) : <Image src={Logo} width="75" height="75"  alt='logo gandom software group' className='w-36 h-16  object-cover' />}</div>
                     {/* <div dir="ltr" className='flex flex-row rtl:justify-end order-1 w-2/12'>{theme === "dark" ? (<LogoLight className='w-36 h-16' />) : <LogoDark className='w-36 h-16' />}</div> */}
                     <div className="hidden md:flex order-2 xl:w-5/12 lg:w-6/12" id="mobile-menu-4">
                         <ul className="flex justify-between items-center w-full">
@@ -187,7 +187,7 @@ const Header: FC<HeaderProps> = () => {
                         <HamburgerMenu className='w-16 h-5' />
                     </div>
                     <div dir="ltr" className='flex flex-row rtl:justify-end justify-start order-1 w-8/12'>
-                        {theme === "dark" ? (<Image src={Logo} alt='logo gandom engineering group' width="100" height="100" className='w-32 sm:w-auto h-10  sm:ltr:ml-7 sm:rtl:mr-7 ltr:ml-8 rtl:mr-8' />) : <Image src={Logo} alt='logo gandom engineering group' width="100" height="100" className='w-auto h-10 ltr:ml-2 rtl:mr-2' />}
+                        {theme === "dark" ? (<Image src={Logo} alt='logo gandom engineering group' width="100" height="100"  className='w-32 sm:w-auto h-10  sm:ltr:ml-7 sm:rtl:mr-7 ltr:ml-8 rtl:mr-8  object-cover' />) : <Image src={Logo} alt='logo gandom engineering group' width="100" height="100" className='w-auto h-10 ltr:ml-2 rtl:mr-2  object-cover' />}
                         {/* {theme === "dark" ? (<LogoLight className='w-32 sm:w-auto h-10  sm:ltr:ml-7 sm:rtl:mr-7 ltr:ml-8 rtl:mr-8' />) : <LogoDark className='w-auto h-10 ltr:ml-2 rtl:mr-2' />} */}
                     </div>
                 </div>

@@ -66,7 +66,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
             title: "ourWorks"
         }, {
             href: "/",
-            title: "ourTeam"
+            title: "our-team"
         }, {
             href: "/",
             title: "aboutus"

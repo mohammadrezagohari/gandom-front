@@ -6,6 +6,8 @@ import Card, { CardProps } from "@components/ui/Card/Card";
 import { SliderDataSeo, SliderDataWeb, SliderDataApp } from "@components/pages-components/data";
 import Slider from "../../../../common/Slider";
 import PersonalCard from "@components/ui/PersonalCard";
+import LazyLoad from "react-lazy-load";
+import VerticalSlider from "@components/common/verticalSlider/VerticalSlider";
 
 const tabs = [
     { label: 'webDesign', data: SliderDataSeo, id: 1 },
@@ -24,11 +26,18 @@ const Tab = () => {
     const [tabValue, setTabValue] = useState<number>()
     const [first, setfirst] = useState<CardProps[]>([])
     const { t } = useTranslation('translation');
+    const [isLoading, setIsLoading] =  useState<boolean>(true)
 
     useEffect(() => {
         setTabValue(1)
         setfirst(tabs[0].data)
     }, [])
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 5000);
+    // }, []);
 
     return (
         <div className="w-full flex-col">
@@ -43,7 +52,7 @@ const Tab = () => {
                     return (
                         <div
                             key={index}
-                            onClick={() => { setfirst(item.data); setTabValue(item.id) }}
+                            onClick={() => { setfirst(item.data); setTabValue(item.id);}}
                             className={cn("py-5 flex justify-center items-center transition-colors duration-500")}>
                             <div className={cn("block w-[8rem] md:w-[10rem] flex justify-center items-center lg:w-fit pt-2 pb-3 md:px-10 lg:pl-3 md:pr-1 md:pl-1 font-light text-gray-dark border-b-2 text-sm md:text-lg border-transparent cursor-pointer hover:border-dark hover:text-dark hover:dark:border-gold dark:hover:text-gold dark:text-gray-light transition duration-200 ease-in-out",
                                 item.id == tabValue ? "border-b-2 border-dark dark:border-gold text-gray-darkFull font-bold dark:text-gold" : "")}>
@@ -54,7 +63,41 @@ const Tab = () => {
                 })}
             </ul>
             <div className="w-full ">
-                <Slider list={first} cardMode="general" />
+              {/* <LazyLoad  threshold={0.95} onContentVisible={() => {
+                     setTimeout(() => {
+                        setIsLoading(false);
+                    }, 2000);
+                    console.log("Loading...");
+                    
+                }}>
+                {
+                    isLoading?(
+                        <>
+                        <div className="w-full flex justify-center items-center ">
+
+                           <img src="./logo.png" alt="" className="loaderAnimation" />
+                        
+                        </div>
+                        </>
+                    ):(
+                        <>
+                           <Slider list={first} cardMode="general" />
+                        </>
+                    )
+                }
+                </LazyLoad> */}
+
+                 <div className="hidden md:block lg:block" >
+                    <Slider list={first} cardMode="general" />
+                </div>
+
+                <div className="block md:hidden lg:hidden" >
+                    <VerticalSlider
+                      cardMode="general"
+                      list={first}
+                    />
+                </div>
+ 
             </div>
         </div>
     );

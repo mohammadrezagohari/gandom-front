@@ -7,11 +7,11 @@ import { Layout, SliderColumn } from '@components/common';
 import LogoLight from '@assets/svg/gold/gandom-gold.svg';
 import LogoDark from '@assets/svg/blcak/gandom-black.svg';
 
-interface OurTeamProps {
+interface ourTeamProps {
     locale?: any
 }
 
-const AboutUs: FC<OurTeamProps> = (props) => {
+const AboutUs: FC<ourTeamProps> = (props) => {
 
     const { t } = useTranslation('translation');
 
@@ -39,7 +39,7 @@ const AboutUs: FC<OurTeamProps> = (props) => {
 
     return (
         <Layout title="Gandom" >
-            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
+            <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex flex-col  justify-between items-center mt-7'>
 
                     {theme === "dark" ? <LogoLight className='w-full h-[10rem]' direction={"ltr"} /> : <LogoDark className='w-full h-[10rem]' direction={"ltr"} />}

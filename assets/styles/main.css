@@ -20,3 +20,29 @@
     overflow-x: hidden;
 
 }
+.loaderAnimation{
+    width:100px;
+    height: 100px;
+    animation: spinner 1s infinite linear;
+}
+@keyframes spinner {
+    0%{
+      transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  img{
+    object-fit: cover;
+  }
