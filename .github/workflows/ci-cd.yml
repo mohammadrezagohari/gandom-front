@@ -19,11 +19,7 @@ jobs:
           node-version: 14
 
       - name: Use Node.js version 14 with nvm
-        run: |
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-          nvm use 14
+        run: nvm use 14
 
       - name: Install Yarn
         run: npm install -g yarn
