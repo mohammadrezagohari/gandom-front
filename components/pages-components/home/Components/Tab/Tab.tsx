@@ -88,11 +88,14 @@ const Tab = () => {
                 </LazyLoad> */}
 
                  <div className="hidden md:block lg:block" >
-                    <Slider list={first} cardMode="general" />
+                    <Slider
+                     singlePageLink="samples/web-design"
+                      list={first} cardMode="general" />
                 </div>
 
                 <div className="block md:hidden lg:hidden" >
                     <VerticalSlider
+                      singlePageLink="samples/web-design"
                       cardMode="general"
                       list={first}
                     />

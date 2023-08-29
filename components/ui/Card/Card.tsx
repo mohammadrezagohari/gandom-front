@@ -15,7 +15,7 @@ export interface CardProps {
     // hrefCard: string,
     jobPosition?: string
 } 
- 
+  
 const Card: FC<CardProps> = ({ id,url, alt, caption }) => {
     const router = useRouter();
     const dispatch = useDispatch();
@@ -30,14 +30,14 @@ const Card: FC<CardProps> = ({ id,url, alt, caption }) => {
          //  href={`ourWorks/details/[id]`}> */}  
     return (
         <div className='relative'>
-            <div className='border w-12/12 h-full hover:bg-dark dark:hover:bg-gold dark:border-gold text-dark hover:text-white dark:text-gold hover:dark:text-dark border-dark py-8 px-5 flex justify-center items-center transition-colors duration-300 ease-in-out'>
+            <div className='border w-12/12 lg:w-12/12 mx-auto lg:mx-0 h-full hover:bg-dark dark:hover:bg-gold dark:border-gold text-dark hover:text-white dark:text-gold hover:dark:text-dark border-dark py-8 px-5 flex justify-center items-center transition-colors duration-300 ease-in-out'>
                 <div >
                     <div className='flex flex-col justify-start w-full h-full self-center'>
                         <LazyLoadImage
                             src={url}
                             alt={alt}
-                            width="400px"
-                            height="400px"
+                            // width="400px"
+                            // height="400px"
                             style={{ position: 'relative', display: 'block',objectFit:'cover' }}
                             // quality={70}
                             onClick={(e:any) => {
@@ -45,6 +45,7 @@ const Card: FC<CardProps> = ({ id,url, alt, caption }) => {
                                 e.preventDefault();
                                 dispatch(togglePopup(caption, url, alt))
                             }}
+                            className=""
                             effect="blur"
                             delayTime={8000}
                             placeholderSrc='loading'

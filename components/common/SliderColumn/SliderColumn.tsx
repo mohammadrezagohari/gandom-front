@@ -78,6 +78,7 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                             >
                                 <div className="w-12/12 flex flex-col justify-center items-center">
                                     <CardComponent
+                                        id={item.id} 
                                         url={item.url}
                                         alt={item.alt}
                                         caption={item.caption}
@@ -86,10 +87,10 @@ const SliderColumn: FC<SliderProps> = ({ list, cardMode }) => {
                                 </div>
                                 <div className="w-12/12 mt-12 flex flex-col justify-center items-center">
                                     <CardComponent
+                                        id={item.id}                                        // hrefCard={item.hrefCard}
                                         url={item.url}
                                         alt={item.alt}
-                                        caption={item.caption}
-                                        // hrefCard={item.hrefCard}
+                                        caption={item.caption} 
                                     />
                                 </div>
                             </SwiperSlide>

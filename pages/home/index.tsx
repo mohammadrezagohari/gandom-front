@@ -38,7 +38,7 @@ const Home: FC<HomeProps> = (props) => {
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <div className='w-full md:w-6/12 xl:w-7/12 flex flex-col items:center justify-center md:items-start md:justify-start mt-0 sm:mt-13 md:mt-0'>
                         <h1 className='font-NotoSerif rtl:font-Yekanbakh mt-10 md:mt-0 font-bold text-5xl text-dark dark:text-gold leading-snug sm:text-center md:text-start xl:text-justify'>{t("title1")}<br />{t("title2")}</h1>
-                        <p className='font-Poppins rtl:font-Yekanbakh font-regular dark:text-gray-default text-gray-dark mt-8 text-xl leading-9 xl:w-8/12 md:w-11/12 text-center md:text-start xl:text-justify'>
+                        <p  style={{textAlign:'justify'}} className='font-Poppins rtl:font-Yekanbakh font-regular dark:text-gray-default text-gray-dark mt-8 text-xl leading-9 xl:w-8/12 md:w-11/12 text-center md:text-start xl:text-justify'>
                             {t("discription")}
                         </p>
                         <div className='flex md:jusctify-start justify-center items-center mt-14'>
@@ -71,7 +71,7 @@ const Home: FC<HomeProps> = (props) => {
                     <JoinForm />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-24">
-                    <HomeSlider title="our-team" list={TeamData} cardMode='personal' />
+                    <HomeSlider singlePageLink="ourTeam" title="our-team" list={TeamData} cardMode='personal' />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-32">
                     <FollowUs />

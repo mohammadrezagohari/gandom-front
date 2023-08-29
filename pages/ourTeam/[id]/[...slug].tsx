@@ -3,7 +3,7 @@ import {useTranslation} from "next-i18next";
 import {Layout} from "@components/common";
 import Image from "next/image";
 import { useRouter } from 'next/router';
-import { SliderDataSeo } from '@components/pages-components/data';
+import { TeamData } from '@components/pages-components/data';
 
 const PostDetail: React.FC = () => {
 
@@ -31,7 +31,7 @@ const PostDetail: React.FC = () => {
     const router = useRouter();
     const { id, slug } = router.query;
 
-    const post = SliderDataSeo.find((post) => post.id === id);
+    const post = TeamData.find((post) => post.id === id);
 
     if (!post) {
         return <div>Post not found</div>;
@@ -43,8 +43,8 @@ const PostDetail: React.FC = () => {
 
 
 
-            <Layout title="Gandom" >
-            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
+        <Layout title="Gandom" >
+            <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10 pt-[10%] lg:pt-0">
                 <div className="w-full flex-col">
                     <div className="w-full flex items-center justify-center">
                         <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-base sm:text-xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
@@ -54,30 +54,13 @@ const PostDetail: React.FC = () => {
                     </div>
                     <div className='w-full py-5 flex flex-col justify-center items-center sm:mt-10'>
                         <Image
-                            src={ImageList[activeImage].url}
-                            alt={ImageList[activeImage].title}
-                            width="600px"
-                            height="120px"
-                            className={"object-cover border-dark border dark:border-gold"}
+                            src={post.url}
+                            alt={post.caption}
+                            width={500}
+                            height={600}
+                            className={"object-cover border-dark border dark:border-gold "}
                         /> 
-                        <div className='flex justify-center space-x-2 md:space-x-7 mt-7'>
-                            {ImageList.map((item: any, index: any) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className='border border-transparent hover:dark:border-gold'>
-                                        <Image
-                                            src={item.url}
-                                            alt={item.title}
-                                            width="150px"
-                                            height="170px"
-                                            onClick={() => setActiveImage(item.id - 1)}
-                                            className={"object-cover border-dark border dark:border-gold"}
-                                        />
-                                    </div>
-                                )
-                            })}
-                        </div>
+                      
                     </div>
                     <div className='w-full py-5 mt-5'>
                     <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-base sm:text-xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">

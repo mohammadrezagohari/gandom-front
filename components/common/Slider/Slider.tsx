@@ -30,6 +30,7 @@ import KeenSlider from 'keen-slider'
 export interface SliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
+    singlePageLink:string
 }
   
 const CardType = {
@@ -37,14 +38,14 @@ const CardType = {
     general: Card,
 }
 
-const Slider: FC<SliderProps> = ({ list, cardMode }) => {
+const Slider: FC<SliderProps> = ({singlePageLink, list, cardMode }) => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
     const [visible, setVisible] = useState<boolean>(false);
 
     const CardComponent = CardType[cardMode];
 
-    useEffect(() => {
+    useEffect(() => { 
         setIsSidebarOpen(visible)
     }, [visible])
 
@@ -104,11 +105,11 @@ const Slider: FC<SliderProps> = ({ list, cardMode }) => {
                             <SwiperSlide
                                 key={index}
                             >
-                                <Link href={`/samples/${item.id}/${item.alt}`}>
+                                <Link href={`/${singlePageLink}/${item.id}/${item.alt}`}>
 
                                 <div className="max-w-12/12 flex justify-center items-center">
                                     <CardComponent
-                                         id={item.id}
+                                        id={item.id}
                                         url={item.url}
                                         alt={item.alt}
                                         caption={item.caption}

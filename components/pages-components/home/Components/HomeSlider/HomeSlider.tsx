@@ -11,13 +11,14 @@ interface HomeSliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
     title: string
+    singlePageLink:string
 } 
 const CardType = {
     personal: PersonalCard,
     general: Card,
 }
 
-const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {
+const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title,singlePageLink }) => {
     const { t } = useTranslation('translation');
     const [isLoading, setIsLoading] =  useState<boolean>(true)
 // useEffect(() => {
@@ -61,6 +62,7 @@ const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {
                 </LazyLoad> */}
                 <div className="hidden md:block lg:block" >
                     <Slider
+                       singlePageLink={singlePageLink}
                         cardMode={cardMode}
                         list={list}
                     />
@@ -68,6 +70,7 @@ const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title }) => {
 
                 <div className="block md:hidden lg:hidden" >
                     <VerticalSlider
+                      singlePageLink={singlePageLink}
                       cardMode={cardMode}
                       list={list}
                     />

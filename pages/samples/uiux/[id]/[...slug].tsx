@@ -3,8 +3,8 @@ import {useTranslation} from "next-i18next";
 import {Layout} from "@components/common";
 import Image from "next/image";
 import { useRouter } from 'next/router';
-import { SliderDataSeo } from '@components/pages-components/data';
-
+import { OurWorksData } from '@components/pages-components/data';
+ 
 const PostDetail: React.FC = () => {
 
     const [activeImage, setActiveImage] = useState<number>(0);
@@ -31,7 +31,7 @@ const PostDetail: React.FC = () => {
     const router = useRouter();
     const { id, slug } = router.query;
 
-    const post = SliderDataSeo.find((post) => post.id === id);
+    const post = OurWorksData.find((post) => post.id === id);
 
     if (!post) {
         return <div>Post not found</div>;
@@ -52,7 +52,7 @@ const PostDetail: React.FC = () => {
                         </h2>
                         <span className="h-[3px] w-full bg-dark dark:bg-gold hidden sm:flex" />
                     </div>
-                    <div className='w-full py-5 flex flex-col justify-center items-center sm:mt-10'>
+                    {/* <div className='w-full py-5 flex flex-col justify-center items-center sm:mt-10'>
                         <Image
                             src={ImageList[activeImage].url}
                             alt={ImageList[activeImage].title}
@@ -78,11 +78,30 @@ const PostDetail: React.FC = () => {
                                 )
                             })}
                         </div>
+                    </div> */}
+                    <div className='w-full py-5 flex flex-col justify-center items-center sm:mt-10'>
+                        <div style={{ width:"500px",height:"600px"}} className="w-[500px] h-[600px]" >
+                        <img   
+                         src={post.url}
+                         alt={post.caption}
+                         width="100%"
+                         height="100%"
+                         className={"object-cover border-dark border dark:border-gold "}
+                        />
+                        {/* <Image
+                            src={post.url}
+                            alt={post.caption}
+                            width="100%"
+                            height="100%"
+                            className={"object-cover border-dark border dark:border-gold "}
+                        />  */}
+                        </div>
+                        
                     </div>
                     <div className='w-full py-5 mt-5'>
-                    <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-base sm:text-xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
+                      <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-base sm:text-xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
                       {post.caption}
-                    </h2>
+                      </h2>
                         {/* <h1>{post.alt}</h1> */}
                         <p className='font-light font-Poppins rtl:font-yekanBakh text-justify md:text-start text-dark dark:text-white text-base md:text-xl w-12/12 md:w-11/12 '>
                              Gandom is a software group consisting of capable and talented young Iranians who are active Gandom is a software group consisting of capable and talented young Iranians who are active in the fields of production and design of websites and web-based software, as well as in the field of graphic design and UI/UX design.

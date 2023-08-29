@@ -117,7 +117,8 @@ export const TeamData = [
        // hrefCard: "./ourWorks/ProductDetail",
         id: "4"
     }, {
-        url: "/bio/parsa-panahpoor.jpg",
+        // url: "/bio/parsa-panahpoor2.jpg",
+        url: "/bio/kasra-yaseri.jpg",
         alt: "Parsa Pasahpoor",
         caption: "Parsa Pasahpoor",
         jobPosition: "Backend Developer",
