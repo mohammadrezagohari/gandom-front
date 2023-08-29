@@ -12,6 +12,7 @@ import Counter from '@components/ui/Counter';
 import { FollowUs, HomeSlider, Tab } from '@components/pages-components/home/Components';
 import { TeamData } from '@components/pages-components/data';
 import Image from 'next/image';
+import { WorksSlider } from '@components/pages-components/ourWorks/Components';
 
 interface HomeProps {
     locale?: any
@@ -71,7 +72,8 @@ const Home: FC<HomeProps> = (props) => {
                     <JoinForm />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-24">
-                    <HomeSlider singlePageLink="ourTeam" title="our-team" list={TeamData} cardMode='personal' />
+                <WorksSlider singlePageLink="ourTeam" list={TeamData} sliderMode='single' title='ourTeam' cardMode='general' />
+                    {/* <HomeSlider singlePageLink="ourTeam" title="our-team" list={TeamData} cardMode='personal' /> */}
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-32">
                     <FollowUs />

@@ -30,7 +30,7 @@ const Card: FC<CardProps> = ({ id,url, alt, caption }) => {
          //  href={`ourWorks/details/[id]`}> */}  
     return (
         <div className='relative'>
-            <div className='border w-12/12 lg:w-12/12 mx-auto lg:mx-0 h-full hover:bg-dark dark:hover:bg-gold dark:border-gold text-dark hover:text-white dark:text-gold hover:dark:text-dark border-dark py-8 px-5 flex justify-center items-center transition-colors duration-300 ease-in-out'>
+            <div className='border hover:cursor-pointer w-12/12 lg:w-12/12 mx-auto lg:mx-0 h-full hover:bg-dark dark:hover:bg-gold dark:border-gold text-dark hover:text-white dark:text-gold hover:dark:text-dark border-dark py-8 px-5 flex justify-center items-center transition-colors duration-300 ease-in-out'>
                 <div >
                     <div className='flex flex-col justify-start w-full h-full self-center'>
                         <LazyLoadImage

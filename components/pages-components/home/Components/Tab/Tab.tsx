@@ -56,7 +56,7 @@ const Tab = () => {
                             className={cn("py-5 flex justify-center items-center transition-colors duration-500")}>
                             <div className={cn("block w-[8rem] md:w-[10rem] flex justify-center items-center lg:w-fit pt-2 pb-3 md:px-10 lg:pl-3 md:pr-1 md:pl-1 font-light text-gray-dark border-b-2 text-sm md:text-lg border-transparent cursor-pointer hover:border-dark hover:text-dark hover:dark:border-gold dark:hover:text-gold dark:text-gray-light transition duration-200 ease-in-out",
                                 item.id == tabValue ? "border-b-2 border-dark dark:border-gold text-gray-darkFull font-bold dark:text-gold" : "")}>
-                                <span className="text-justify font-Poppins block rtl:font-Yekanbakh whitespace-nowrap text-lg md:text-xl ">{t(item.label)}</span>
+                                <span className="text-justify font-Poppins block rtl:font-Yekanbakh whitespace-nowrap text-md md:text-lg lg:text-xl ">{t(item.label)}</span>
                             </div>
                         </div>
                     );

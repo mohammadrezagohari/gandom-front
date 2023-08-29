@@ -61,8 +61,8 @@ const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode }) => 
     return (
         <div className=" w-full  ">
             <div
-                style={{ height: '1300px' }}
-                className="  flex items-center justify-start"
+                // style={{ height: '1400px' }}
+                className="verticalSliderHeight flex items-center justify-start"
             >
                 <Swiper
                     // slidesPerColumn={1}
@@ -102,7 +102,7 @@ const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode }) => 
                     })}
                 </Swiper>
             </div>
-            <div className="w-full flex flex-row justify-between items-center mt-10 pt-5">
+            <div className="w-full flex flex-row justify-between items-center">
                 <div className="flex rtl:flex-row-reverse justify-between flex-row  space-x-5">
                     <div
                         className="cursor-pointer border border-dark dark:border-gold p-3 w-[3rem] h-[3rem] flex jusify-center items-center"

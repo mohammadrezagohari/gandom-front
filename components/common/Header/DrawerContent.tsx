@@ -58,17 +58,19 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
         {
             href: "/home",
             title: "home"
-        }, {
-            href: "/",
-            title: "order"
-        }, {
-            href: "/",
+        },
+        //  {
+        //     href: "/order",
+        //     title: "order"
+        // },
+         {
+            href: "/ourWorks",
             title: "ourWorks"
         }, {
-            href: "/",
-            title: "our-team"
+            href: "/ourTeam",
+            title: "ourTeam"
         }, {
-            href: "/",
+            href: "/aboutUs",
             title: "aboutus"
         },
     ]
@@ -77,7 +79,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
             <li
                 key={index}
                 onClick={() => setVisible(false)}
-                className="w-full border-b-1 border-dark dark:border-gold px-4 py-7 flex items-center">
+                className="w-full border-b-1 border-dark dark:border-gold px-4 py-7 flex items-center hover:cursor-pointer">
                 <Link href={item.href}>
                     <span
                         className={cn("text-justify ltr:ml-2 rtl:mr-2 font-light ltr:text-start rtl:text-end font-Poppins rtl:font-Yekanbakh block sm:text-xl text-dark dark:text-gold",
@@ -94,7 +96,7 @@ const DrawerContent: FC<DrawerProp> = ({ visible, setVisible }) => {
             ref={drawer}
             className={cn("flex-row w-full top-0 bg-transparent z-[400] absolute", visible ? "flex" : "hidden")}>
             <div
-                className="backdrop-blur-[3px] dark:backdrop-blur-md bg-white/90 dark:bg-dark/90 top-0 flex rtl:right-0 ltr-left-0 z-[100] ltr:border-r-1 rtl:border-l-1 dark:border-gold border-dark h-screen w-7/12">
+                className=" overflow-y-scroll backdrop-blur-[3px] dark:backdrop-blur-md bg-white/90 dark:bg-dark/90 top-0 flex rtl:right-0 ltr-left-0 z-[100] ltr:border-r-1 rtl:border-l-1 dark:border-gold border-dark h-screen w-7/12">
                 <ul className="w-full h-full flex-col mb-10 flex ">
                     {drawerList.map((item: ListDrawer, index: any) => renderItem(item, index))}
 

@@ -22,13 +22,13 @@ const AboutUs: FC<ourTeamProps> = (props) => {
     const renderSection = (title: string, content: string) => {
         return (
             <div className="w-full flex-col mt-28">
-                <div className="w-full flex items-center justify-center">
+                <div className="w-[93%] mx-auto lg:w-full flex items-center justify-center">
                     <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-2xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
                         {t(title)}
                     </h2>
                     <span className="h-[3px] w-full bg-dark dark:bg-gold" />
                 </div>
-                <div className='w-full flex items-end '>
+                <div className='w-full flex items-center justify-center lg:flex lg:justify-start lg:items-end text-center'>
                     <p className='font-Poppins rtl:font-Yekanbakh font-light dark:text-gray-default text-gray-dark mt-10 text-xl leading-9 w-11/12 text-justify'>
                         {t(content)}
                     </p>

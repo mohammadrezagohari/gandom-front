@@ -35,8 +35,8 @@ const Counter = (start: any) => {
 
         return (
             <div key={index} className='w-4/12 p-4 md:w-2/12 h-[10rem] md:h-[14rem] flex flex-col justify-around items-center bg-gray-light dark:bg-gray-darkFull'>
-                <span className="value text-5xl md:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} >0</span>
-                <span className='text-xl md:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
+                <span className="value text-4xl md:text-5xl lg:text-7xl dark:text-gold text-dark rtl:font-Yekanbakhfont-Poppins font-bold" count={item.count} >0</span>
+                <span className='text-[14.5px] md:text-xl lg:text-2xl text-white text-center rtl:font-Yekanbakh font-Poppins font-medium'>{item.title}</span>
             </div>
         )
 

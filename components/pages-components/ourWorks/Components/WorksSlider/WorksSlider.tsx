@@ -17,7 +17,7 @@ const WorksSlider: FC<WorksSliderProps> = ({singlePageLink, list, cardMode, titl
     const [isLoading, setIsLoading] =  useState<boolean>(true)
     return (
         <div className="w-full flex-col">
-            <div className="w-full flex items-center justify-center">
+            <div className="w-full flex items-center justify-center px-1 lg:px-0">
                 <h2 className="font-bold whitespace-nowrap mb-1 md:mb-3 font-Poppins rtl:font-yekanBakh text-dark text-2xl md:text-3xl lg:text-4xl dark:text-gold ltr:mr-10 rtl:ml-10">
                     {t(title)}
                 </h2>
@@ -79,7 +79,7 @@ const WorksSlider: FC<WorksSliderProps> = ({singlePageLink, list, cardMode, titl
 
 
                 <div className="hidden md:block lg:block" >
-                <Slider
+                    <Slider
                         singlePageLink={singlePageLink}
                         cardMode={cardMode}
                         list={list}
