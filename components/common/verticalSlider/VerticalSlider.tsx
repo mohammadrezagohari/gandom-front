@@ -24,17 +24,19 @@ import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
 export interface SliderProps {
-    list: CardProps[];
-    cardMode: 'personal' | 'general';
-    singlePageLink:string
+    list: CardProps[],
+    cardMode: 'personal' | 'general',
+    singlePageLink:string,
+    seeAllBtnLink:string,
+
 }
 
 const CardType = {
     personal: PersonalCard,
-    general: Card,
+    general: Card, 
 };
 
-const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode }) => {
+const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode,seeAllBtnLink }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -59,7 +61,7 @@ const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode }) => 
     const { t } = useTranslation();
 
     return (
-        <div className=" w-full  ">
+        <div className=" w-full ">
             <div
                 // style={{ height: '1400px' }}
                 className="verticalSliderHeight flex items-center justify-start"
@@ -134,7 +136,7 @@ const VerticalSlider: FC<SliderProps> = ({ singlePageLink, list, cardMode }) => 
                     </div>
                 </div>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold mx-10" />
-                <Link href="/">
+                <Link href={`/${seeAllBtnLink}`}>
                     <h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold text-xl dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] jusify-center items-center font-Poppins rtl:font-Yekanbakh">
                         {t('seeAll')}
                     </h6>

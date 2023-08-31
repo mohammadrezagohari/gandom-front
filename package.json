@@ -58,6 +58,7 @@
         "react": "18.1.0",
         "react-dom": "18.1.0",
         "react-i18next": "^11.16.9",
+        "react-infinite-scroll-component": "^6.1.0",
         "react-lazy-load": "^4.0.1",
         "react-lazy-load-image-component": "^1.6.0",
         "react-query": "^3.39.1",

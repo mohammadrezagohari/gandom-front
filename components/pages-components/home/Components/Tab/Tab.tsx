@@ -89,12 +89,15 @@ const Tab = () => {
 
                  <div className="hidden md:block lg:block" >
                     <Slider
+                     seeAllBtnLink="ourWorks"
                      singlePageLink="samples/web-design"
-                      list={first} cardMode="general" />
+                      list={first}
+                      cardMode="general" />
                 </div>
 
                 <div className="block md:hidden lg:hidden" >
                     <VerticalSlider
+                      seeAllBtnLink="ourWorks"
                       singlePageLink="samples/web-design"
                       cardMode="general"
                       list={first}

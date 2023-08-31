@@ -30,15 +30,16 @@ import KeenSlider from 'keen-slider'
 export interface SliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
-    singlePageLink:string
+    singlePageLink:string,
+    seeAllBtnLink:string
 }
   
 const CardType = {
-    personal: PersonalCard,
+    personal: PersonalCard, 
     general: Card,
 }
 
-const Slider: FC<SliderProps> = ({singlePageLink, list, cardMode }) => {
+const Slider: FC<SliderProps> = ({seeAllBtnLink,singlePageLink, list, cardMode }) => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
     const [visible, setVisible] = useState<boolean>(false);
@@ -138,7 +139,11 @@ const Slider: FC<SliderProps> = ({singlePageLink, list, cardMode }) => {
                     </div>
                 </div>
                 <span className="h-[3px] w-full bg-dark dark:bg-gold lg:mx-10" />
-                <Link href="/"><h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] flex jusify-center items-center font-Poppins rtl:font-Yekanbakh  text-[13px] md:text-lg lg:text-xl showAllBtn" >{t("seeAll")}</h6></Link>
+                <Link href={`/${seeAllBtnLink}`}>
+                    <h6 className="cursor-pointer whitespace-nowrap border border-dark dark:border-gold dark:text-gold text-dark text-center font-medium flex items-cenetr justify-center p-3 w-3/12 md:w-2/12 lg:w-[8rem] h-[3rem] flex jusify-center items-center font-Poppins rtl:font-Yekanbakh  text-[13px] md:text-lg lg:text-xl showAllBtn" >
+                        {t("seeAll")}
+                    </h6>
+                </Link>
             </div>
         </div>
     );

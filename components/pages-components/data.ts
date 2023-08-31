@@ -185,6 +185,51 @@ export const OurWorksData = [
         // hrefCard: "/ourWorks/ProductDetail",
         id: "5"
     },
+    {
+        url: "/samples/1/1-1.jpg",
+        alt: "Online Clothes Shop",
+        caption: "Online Clothes Shop 6",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "6"
+    }, {
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website 7",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "7"
+    }, {
+        url: "/demoBlue.png",
+        alt: "Academy Hekmat Website",
+        caption: "Academy Hekmat 8",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "8"
+    }, {
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website 9",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "9"
+    },
+    {
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website 10",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "10"
+    },
+    {
+        url: "/samples/1/1-1.jpg",
+        alt: "Online Clothes Shop",
+        caption: "Online Clothes Shop 1",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "1"
+    }, {
+        url: "/demo.png",
+        alt: "Beauty Glow Website",
+        caption: "Beauty Glow Website 2",
+        // hrefCard: "/ourWorks/ProductDetail",
+        id: "2"
+    },
 ]
 
 export const SliderDataWeb = [

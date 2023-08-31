@@ -17,8 +17,8 @@ const Footer = () => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <div className="w-full relative bottom-0 flex flex-col z-[10000]">
-            <div className='dark:bg-gray-darkFull Full bg-gray-light w-full mx-1 lg:px-20 xl:px-28 pt-7'>
+        <div className=" w-full relative bottom-0 flex flex-col z-[10000]">
+            <div className='dark:bg-gray-darkFull Full bg-gray-light w-full mx-1 px-5 lg:px-20 xl:px-28 pt-7'>
                 <div className='pb-10 p-3 flex-col xl:flex justify-between items-center border-b-2 dark:border-gray-dark border-gray-dark'>
                     <div className='w-full flex flex-col justify-between items-center self-start'>
                         <div className='w-full'>

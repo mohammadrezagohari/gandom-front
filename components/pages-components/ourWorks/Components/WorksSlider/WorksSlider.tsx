@@ -9,10 +9,12 @@ interface WorksSliderProps {
     cardMode: "personal" | "general",
     title: string,
     sliderMode?: "single" | "double",
-    singlePageLink:string
+    singlePageLink:string,
+    seeAllBtnLink:string,
+    
 } 
   
-const WorksSlider: FC<WorksSliderProps> = ({singlePageLink, list, cardMode, title, sliderMode = "single" }) => {
+const WorksSlider: FC<WorksSliderProps> = ({seeAllBtnLink,singlePageLink, list, cardMode, title, sliderMode = "single" }) => {
     const { t } = useTranslation('translation');
     const [isLoading, setIsLoading] =  useState<boolean>(true)
     return (
@@ -80,6 +82,7 @@ const WorksSlider: FC<WorksSliderProps> = ({singlePageLink, list, cardMode, titl
 
                 <div className="hidden md:block lg:block" >
                     <Slider
+                        seeAllBtnLink={seeAllBtnLink}
                         singlePageLink={singlePageLink}
                         cardMode={cardMode}
                         list={list}
@@ -88,6 +91,7 @@ const WorksSlider: FC<WorksSliderProps> = ({singlePageLink, list, cardMode, titl
 
                 <div className="block md:hidden lg:hidden" >
                     <VerticalSlider
+                     seeAllBtnLink={seeAllBtnLink}
                      singlePageLink={singlePageLink}
                      cardMode={cardMode}
                      list={list}

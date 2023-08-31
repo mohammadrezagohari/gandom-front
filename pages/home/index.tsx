@@ -72,7 +72,7 @@ const Home: FC<HomeProps> = (props) => {
                     <JoinForm />
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-24">
-                <WorksSlider singlePageLink="ourTeam" list={TeamData} sliderMode='single' title='ourTeam' cardMode='general' />
+                    <WorksSlider seeAllBtnLink="ourTeam" singlePageLink="ourTeam" list={TeamData} sliderMode='single' title='ourTeam' cardMode='general' />
                     {/* <HomeSlider singlePageLink="ourTeam" title="our-team" list={TeamData} cardMode='personal' /> */}
                 </section>
                 <section className="w-full 2xl:mx-auto 2xl:px-0 py-3 lg:px-10 mt-32">

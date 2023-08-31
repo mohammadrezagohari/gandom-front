@@ -10,15 +10,17 @@ import VerticalSlider from "@components/common/verticalSlider/VerticalSlider";
 interface HomeSliderProps {
     list: CardProps[],
     cardMode: "personal" | "general",
-    title: string
-    singlePageLink:string
+    title: string,
+    singlePageLink:string,
+    seeAllBtnLink:string,
+
 } 
 const CardType = {
     personal: PersonalCard,
     general: Card,
 }
 
-const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title,singlePageLink }) => {
+const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title,singlePageLink ,seeAllBtnLink}) => {
     const { t } = useTranslation('translation');
     const [isLoading, setIsLoading] =  useState<boolean>(true)
 // useEffect(() => {
@@ -62,6 +64,7 @@ const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title,singlePageLink 
                 </LazyLoad> */}
                 <div className="hidden md:block lg:block" >
                     <Slider
+                         seeAllBtnLink={seeAllBtnLink}
                        singlePageLink={singlePageLink}
                         cardMode={cardMode}
                         list={list}
@@ -70,6 +73,7 @@ const HomeSlider: FC<HomeSliderProps> = ({ list, cardMode, title,singlePageLink 
 
                 <div className="block md:hidden lg:hidden" >
                     <VerticalSlider
+                      seeAllBtnLink={seeAllBtnLink}
                       singlePageLink={singlePageLink}
                       cardMode={cardMode}
                       list={list}
