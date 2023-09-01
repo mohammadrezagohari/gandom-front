@@ -38,7 +38,7 @@ const AboutUs: FC<ourTeamProps> = (props) => {
     }
 
     return (
-        <Layout title="Gandom" >
+        <Layout >
             <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex flex-col  justify-between items-center mt-7'>
 

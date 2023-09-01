@@ -35,7 +35,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ children, title, mode, styleCus
     ]
 
     return (
-        <Layout title="Gandom" >
+        <Layout  >
             <div className=" xl:px-20 md:px-5 px-2 mx-7 flex flex-col md:mt-10">
                 <div className="w-full flex-col">
                     <div className="w-full flex items-center justify-center">

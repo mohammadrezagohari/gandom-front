@@ -34,7 +34,7 @@ const Home: FC<HomeProps> = (props) => {
     }, []);
 
     return (
-        <Layout title="Gandom" >
+        <Layout >
             <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <div className='w-full md:w-6/12 xl:w-7/12 flex flex-col items:center justify-center md:items-start md:justify-start mt-0 sm:mt-13 md:mt-0'>

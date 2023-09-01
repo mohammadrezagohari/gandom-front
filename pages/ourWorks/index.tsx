@@ -13,7 +13,7 @@ interface OurWorksProps {
 const OurWorks: FC<OurWorksProps> = (props) => {
 
     return (
-        <Layout title="Gandom" >
+        <Layout  >
             <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
                 <section className='px-5 lg:px-0 w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <WorksSlider seeAllBtnLink="samples/web-design" singlePageLink="samples/web-design" list={OurWorksData}  title='webDesign' cardMode='general' />

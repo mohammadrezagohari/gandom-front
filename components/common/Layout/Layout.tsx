@@ -9,13 +9,16 @@ import { useSelector } from 'react-redux';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '@components/ui/popup/popup';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 
 export interface LayoutProps {
     children: ReactNode;
     title?: string;
 }
 
-const Layout: FC<LayoutProps> = ({ children, title, }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
+    const { t } = useTranslation('translation');
     const router = useRouter();
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
 
@@ -43,9 +46,13 @@ const Layout: FC<LayoutProps> = ({ children, title, }) => {
                 <div
                     dir={router.locale === 'fa' ? "rtl" : "ltr"}
                     className="overflow-hidden"
-                >
+                > 
                     <Head>
-                        <title>{title}</title>
+                        <title>{t("titleTag")}</title>
+                        <meta name="description" content={t("titleTag")}/>
+                        <meta name="keywords" content="gandom, CSS, JavaScript,web,app,uiux,graphic,design,گندم,سایت,اپلیکیشن,رابط کاربری"/>
+                        <meta name="author" content="Gandom Engineering Group"/>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     </Head>
                     <div className="relative rounded dark:bg-dark flex flex-col w-full min-h-screen justify-center items-center bg-white ">
                         <Header />
@@ -56,5 +63,12 @@ const Layout: FC<LayoutProps> = ({ children, title, }) => {
             </> : null
     );
 };
-
+// export async function getStaticProps({ locale }: { locale: any }) {
+//     return {
+//         props: {
+//             ...(await serverSideTranslations(locale, ['translation'])),
+//             // Will be passed to the page component as props
+//         },
+//     };
+// }
 export default Layout;

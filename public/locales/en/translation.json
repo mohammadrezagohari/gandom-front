@@ -1,11 +1,12 @@
 {
+    "titleTag":"Gandom Engineering Group",
     "test": "hello",
     "langFa":"Persian",
     "langEn": "English",
     "home": "Home",
     "order":"Order",
     "ourWorks": "Our Works",
-    "our-team": "Our Team",
+    "ourTeam": "Our Team",
     "aboutus": "About us",
     "dark": "Dark",
     "light": "Light",
