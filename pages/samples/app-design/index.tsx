@@ -51,7 +51,7 @@ const AppDesign: FC<SliderProps> = ({
     return (
         <>
             <Layout >
-                <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
+               <div className=" xl:px-20 md:px-5 px-3 mx-7 flex flex-col md:mt-10 pt-[13%] lg:pt-0">
                     <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
                    

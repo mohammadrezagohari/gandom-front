@@ -16,8 +16,8 @@ const ourTeam: FC<ourTeamProps> = (props) => {
 
     return (
         <Layout  >
-            <div className=" xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
-                <section className='w-full flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
+            <div className="mt-[5%] lg:mt-0 xl:px-20 md:px-5 px-2 mx-1 xl:mx-7 flex flex-col md:mt-10">
+                <section className='w-full  px-5 flex md:flex-row flex-col-reverse justify-between items-center mt-7'>
                     <WorksSlider seeAllBtnLink="ourTeam" singlePageLink="ourTeam" list={TeamData} sliderMode='double' title='ourTeam' cardMode='general' />
                 </section>
             </div>

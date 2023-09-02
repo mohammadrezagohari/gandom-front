@@ -45,14 +45,14 @@ const Layout: FC<LayoutProps> = ({ children }) => {
                 }
                 <div
                     dir={router.locale === 'fa' ? "rtl" : "ltr"}
-                    className="overflow-hidden"
+                    className="overflow-hidden relative"
                 > 
                     <Head>
                         <title>{t("titleTag")}</title>
-                        <meta name="description" content={t("titleTag")}/>
+                         <meta name="description" content={t("titleTag")}/>
                         <meta name="keywords" content="gandom, CSS, JavaScript,web,app,uiux,graphic,design,گندم,سایت,اپلیکیشن,رابط کاربری"/>
                         <meta name="author" content="Gandom Engineering Group"/>
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0"/ >
                     </Head>
                     <div className="relative rounded dark:bg-dark flex flex-col w-full min-h-screen justify-center items-center bg-white ">
                         <Header />
@@ -63,12 +63,12 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             </> : null
     );
 };
-// export async function getStaticProps({ locale }: { locale: any }) {
+export default Layout;
+{/* // export async function getStaticProps({ locale }: { locale: any }) {
 //     return {
 //         props: {
 //             ...(await serverSideTranslations(locale, ['translation'])),
 //             // Will be passed to the page component as props
 //         },
 //     };
-// }
-export default Layout;
+// } */}

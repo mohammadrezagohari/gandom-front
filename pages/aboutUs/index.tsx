@@ -43,7 +43,7 @@ const AboutUs: FC<ourTeamProps> = (props) => {
                 <section className='w-full flex flex-col  justify-between items-center mt-7'>
 
                     {theme === "dark" ? <LogoLight className='w-full h-[10rem]' direction={"ltr"} /> : <LogoDark className='w-full h-[10rem]' direction={"ltr"} />}
-                    <h1 className='font-serif rtl:font-Yekanbakh mt-10 md:mt-16 font-bold text-3xl md:text-5xl text-dark dark:text-gold leading-snug text-center md:text-start xl:text-justify'>{t("title1")} {t("title2")}</h1>
+                    <h1 className='mx-5  font-serif rtl:font-Yekanbakh mt-10 md:mt-16 font-bold text-3xl md:text-5xl text-dark dark:text-gold leading-snug text-center md:text-start xl:text-justify'>{t("title1")} {t("title2")}</h1>
                     <p className='font-Poppins rtl:font-Yekanbakh font-light dark:text-gray-default text-gray-dark mt-5 text-xl leading-9 w-9/12 text-justify md:text-center '>
                         {t("discription")}
                     </p>
